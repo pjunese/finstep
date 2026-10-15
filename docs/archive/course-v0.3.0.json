@@ -1,0 +1,2549 @@
+{
+  "schema_version": 1,
+  "content_version": "2026-10-07.short-v2",
+  "course_title": "주가를 넘어\n기업의 숫자 이해하기",
+  "lessons": [
+    {
+      "lesson_id": "L01",
+      "concept_ids": [
+        "C_COMPANY",
+        "C_COMMON_STOCK",
+        "C_SHARE",
+        "C_SHAREHOLDER"
+      ],
+      "title": "주식 한 주를 산다는 것은 무엇일까?",
+      "hook_question": "내가 산 주식 한 주는 단순한 숫자일까, 회사와 어떤 관계를 나타낼까?",
+      "prerequisite_ids": [],
+      "learning_objectives": [
+        "주식이 회사에 돈을 빌려준 증서가 아니라 지분을 나타내는 증권임을 구분한다.",
+        "한 주가 전체 회사에서 차지하는 비율은 총 주식 수에 따라 달라짐을 설명한다.",
+        "주주가 회사의 개별 자산을 직접 소유하는 것과 회사 지분을 보유하는 것을 구분한다."
+      ],
+      "brief": {
+        "title": "주식은 회사의\n지분이에요.",
+        "core": "회사의 소유권을 나눈 한 단위가 주식이에요.",
+        "example": "전체 10주 중 1주를 갖고 있다면",
+        "result": "회사 지분의 10%를 가진 거예요.",
+        "remember": "주식을 사도 회사 돈을 마음대로 꺼낼 수는 없어요."
+      },
+      "exercise": {
+        "title": "내 주식이 늘면,\n지분은 얼마나 될까요?",
+        "fixed_label": "전체 주식 수",
+        "fixed": 10,
+        "fixed_unit": "주",
+        "input_label": "내 주식 수",
+        "values": [
+          1,
+          2,
+          5
+        ],
+        "input_unit": "주",
+        "operation": "ownership",
+        "result_label": "지분 비율",
+        "result_unit": "%",
+        "assumption": "같은 권리의 주식만 있다고 가정해요."
+      },
+      "short_title": "주식 한 주의 의미",
+      "pages": [
+        {
+          "title": "주식 한 주를 산다는 것은 무엇일까?",
+          "body": "**주식은 회사에 대한 소유지분(equity)을 나타내는 증권이고, 한 주는 그 지분을 나눈 단위다.** 보통주를 가진 사람은 주주가 된다.\n\n보통주는 일반적으로 다음과 같은 경제적·법적 이해관계와 연결된다.\n\n- 회사 가치가 변하면 보유 주식의 시장가격도 영향을 받을 수 있다.\n- 회사가 배당을 결정하면 주식 수와 종류에 따라 배당을 받을 수 있다.\n- 많은 보통주는 주주총회에서 의결권을 가진다.\n- 회사가 청산될 경우 보통주주는 채권자와 우선주주보다 뒤에 남는 잔여재산에 대한 이해관계를 가진다.\n\n단, **배당은 주식을 갖고 있다는 이유만으로 반드시 지급되는 고정 이자가 아니다.** 또한 모든 종류의 주식이 완전히 같은 권리를 갖는 것도 아니다."
+        },
+        {
+          "title": "예시",
+          "body": "같은 권리의 주식이 총 10주인 가상 회사에서 1주를 갖고 있다면 `1 ÷ 10 × 100 = 10%`의 지분이에요.\n\n주식이 총 20주라면 같은 1주도 `1 ÷ 20 × 100 = 5%`예요. 한 주의 지분 비율은 전체 주식 수에 따라 달라져요. 회사 건물이나 통장의 일부를 직접 가져갈 권리라는 뜻은 아니에요."
+        },
+        {
+          "title": "흔한 오해",
+          "body": "### 헷갈리기 쉬운 점\n\n- 잘못된 생각: “주식을 사면 회사가 나에게 원금을 갚아야 한다.”\n- 교정: 주식은 일반적인 채권·대출처럼 만기 원금 상환을 약속하는 채무가 아니다. 보통주는 지분이다.\n\n### 헷갈리기 쉬운 점\n\n- 잘못된 생각: “주주가 되면 정해진 이자를 반드시 받는다.”\n- 교정: 보통주 배당은 회사의 결정과 법적·재무적 조건 등에 따라 달라질 수 있으며 보장된 이자가 아니다.\n\n### 헷갈리기 쉬운 점\n\n- 잘못된 생각: “회사 지분 1%면 회사 건물의 1%를 직접 소유한다.”\n- 교정: 주주는 회사의 지분을 보유하는 것이며 회사가 보유한 개별 자산의 직접 공동소유자로 단순 치환하면 안 된다."
+        }
+      ],
+      "summary": "주식 한 주 = 회사 지분을 나눈 한 단위. 한 주가 전체에서 차지하는 비율은 총 주식 수에 따라 달라진다.",
+      "next_question": "그렇다면 그 한 주에 붙어 있는 `주가`는 회사 전체의 가격일까?",
+      "source_refs": [
+        "S01",
+        "S02"
+      ]
+    },
+    {
+      "lesson_id": "L02",
+      "concept_ids": [
+        "C_SHARE",
+        "C_SHARE_PRICE"
+      ],
+      "title": "화면에 보이는 주가는 무엇의 가격일까?",
+      "hook_question": "주가가 100,000원인 회사는 주가가 10,000원인 회사보다 열 배 큰 회사일까?",
+      "prerequisite_ids": [
+        "C_SHARE"
+      ],
+      "learning_objectives": [
+        "주가가 기본적으로 주식 한 주의 시장가격이라는 점을 설명한다.",
+        "주가만으로 회사 전체의 시장규모를 비교할 수 없음을 구분한다.",
+        "주식분할처럼 한 주의 단위가 바뀌면 주당 가격도 달라질 수 있음을 이해한다."
+      ],
+      "brief": {
+        "title": "주가는\n한 주의 가격이에요.",
+        "core": "과자 한 봉지의 가격처럼, 주가는 주식 한 주의 가격이에요.",
+        "example": "한 주가 1,000원이면, 2주는",
+        "result": "2,000원이에요.",
+        "remember": "한 주 가격만으로 회사 전체 규모는 알 수 없어요."
+      },
+      "exercise": {
+        "title": "한 주를 나누면\n가격은 어떻게 될까요?",
+        "fixed_label": "분할 전 한 주 가격",
+        "fixed": 4000,
+        "fixed_unit": "원",
+        "input_label": "한 주를 나누는 수",
+        "values": [
+          1,
+          2,
+          4
+        ],
+        "input_unit": "개",
+        "operation": "split",
+        "result_label": "나눈 뒤 한 주 가격",
+        "result_unit": "원",
+        "assumption": "주식분할만 일어나고 다른 조건은 같아요."
+      },
+      "short_title": "주가를 읽는 법",
+      "pages": [
+        {
+          "title": "화면에 보이는 주가는 무엇의 가격일까?",
+          "body": "증권 앱의 `주가 25,000원`은 기본적으로 **그 회사 주식 한 주의 시장가격**을 나타낸다. 회사 전체의 가격을 뜻하지 않는다.\n\n따라서 아래 두 회사가 있다고 해서 바로 B회사가 더 작은 회사라고 말할 수 없다.\n\n| 가상 회사 | 주가 |\n|---|---:|\n| A회사 | 80,000원 |\n| B회사 | 10,000원 |\n\n회사 전체의 주식시장 규모를 비교하려면 **주가뿐 아니라 주식이 몇 주 존재하는지**도 알아야 한다."
+        },
+        {
+          "title": "정확한 설명",
+          "body": "시장가격은 시장에서 거래가 이루어지며 형성되는 가격이다. 실제 거래 화면에서는 마지막 체결가격, 매수호가(bid), 매도호가(ask) 등이 서로 다를 수 있다. MVP에서는 호가 미시구조까지 다루지 않고 `주가 = 주식 한 주의 시장가격`이라는 핵심 의미를 사용한다.\n\n주가가 낮다고 해서 자동으로 “싸다”라고 표현하면 안 된다. `싸다`라는 단어에는 흔히 가치평가 판단이 섞이기 때문이다. 초급 과정에서는 다음을 구분한다.\n\n- **주가가 낮다**: 한 주의 가격 숫자가 낮다.\n- **시가총액이 작다**: 주가와 주식 수를 결합한 전체 시장가치가 작다.\n- **저평가다**: 내재가치와 시장가격을 비교한 별도의 가치판단이며 주가 숫자만으로 결정할 수 없다."
+        },
+        {
+          "title": "주식분할 사고실험",
+          "body": "한 주 가격이 4,000원이고 전체 10주인 가상 회사가 한 주를 두 주로 나눈다고 생각해봐요.\n\n- 나누기 전: `4,000원 × 10주 = 40,000원`\n- 나눈 뒤: `2,000원 × 20주 = 40,000원`\n\n다른 조건이 같다면 주식 수는 두 배, 한 주 가격은 절반이 되어 전체 금액은 같아요. 실제 시장가격에는 다른 요인도 작용하므로 이 예시는 주식분할만 따로 보는 사고실험이에요."
+        }
+      ],
+      "summary": "주가 = 한 주의 시장가격. 회사 전체의 시장규모를 비교하려면 주식 수가 추가로 필요하다.",
+      "next_question": "한 주의 가격과 전체 주식 수를 함께 보면 어떤 숫자를 만들 수 있을까?",
+      "source_refs": [
+        "S03",
+        "S04"
+      ]
+    },
+    {
+      "lesson_id": "L03",
+      "concept_ids": [
+        "C_SHARE_PRICE",
+        "C_SHARES_OUTSTANDING",
+        "C_MARKET_CAP"
+      ],
+      "title": "주가가 다른 두 회사의 시장규모는 어떻게 비교할까?",
+      "hook_question": "주가가 더 낮은 회사가 오히려 시장에서 더 큰 가치로 평가될 수도 있을까?",
+      "prerequisite_ids": [
+        "C_SHARE",
+        "C_SHARE_PRICE"
+      ],
+      "learning_objectives": [
+        "시가총액의 기본 산식을 사용할 수 있다.",
+        "주가와 시가총액을 구분한다.",
+        "시가총액이 매출·순이익·장부가치·기업가치(EV)와 같은 숫자가 아님을 설명한다."
+      ],
+      "brief": {
+        "title": "시가총액은\n주가 × 주식 수예요.",
+        "core": "모든 주식을 지금 주가로 계산한 금액이에요.",
+        "example": "한 주 1,000원 × 전체 10주",
+        "result": "= 시가총액 10,000원",
+        "remember": "회사가 실제 가진 현금이나 매출과는 달라요."
+      },
+      "exercise": {
+        "title": "주식 수를\n바꿔볼까요?",
+        "fixed_label": "한 주 가격",
+        "fixed": 1000,
+        "fixed_unit": "원",
+        "input_label": "전체 주식 수",
+        "values": [
+          10,
+          20,
+          50
+        ],
+        "input_unit": "주",
+        "operation": "market_cap",
+        "result_label": "시가총액",
+        "result_unit": "원",
+        "assumption": "한 주 가격은 그대로예요."
+      },
+      "short_title": "시가총액",
+      "pages": [
+        {
+          "title": "주가가 다른 두 회사의 시장규모는 어떻게 비교할까?",
+          "body": "```text\n시가총액 = 한 주의 시장가격 × 기준이 되는 발행·유통 주식 수\n```\n\nInvestor.gov는 시가총액을 **현재 공개시장 주가에 총 발행주식수(outstanding shares)를 곱한 값**으로 설명한다."
+        },
+        {
+          "title": "비교 예시",
+          "body": "학습용 가상 회사의 숫자예요.\n\n- A회사: `2,000원 × 10주 = 20,000원`\n- B회사: `1,000원 × 30주 = 30,000원`\n\nB회사는 한 주 가격이 낮지만 시가총액은 더 커요. 한 주 가격뿐 아니라 전체 주식 수도 함께 봐야 해요."
+        },
+        {
+          "title": "시가총액이 말해주지 않는 것",
+          "body": "시가총액은 다음과 동일하지 않다.\n\n- **매출**: 회사가 일정 기간 제품·서비스 등을 통해 인식한 수익\n- **순이익**: 비용과 세금 등을 반영한 뒤의 기간 손익\n- **장부상 자본**: 회계장부상의 자산·부채를 바탕으로 계산되는 자본\n- **현금 보유액**\n- **기업가치(Enterprise Value, EV)**: 실무에서 시가총액 외에 순부채 등 다른 요소를 반영해 사용하는 별도 가치지표\n\n따라서 시가총액 10만 원인 회사가 매출도 10만 원이라고 추정해서는 안 된다."
+        },
+        {
+          "title": "주식 수 기준 주의",
+          "body": "학습 과정에서는 `shares_outstanding`이라는 하나의 숫자를 제공해 계산한다. 실제 데이터에서는 다음을 구분해야 할 수 있다.\n\n- 발행주식수\n- 자기주식 처리\n- 유통주식수(outstanding shares)\n- 유동주식수(free float)\n- 복수 주식 종류(class)\n\n따라서 실제 종목 데이터를 붙일 경우 데이터 공급자의 정의를 확인해야 한다."
+        }
+      ],
+      "summary": "시가총액 = 주가 × 주식 수. 한 주의 가격이 낮아도 주식 수가 많으면 시가총액은 더 클 수 있다.",
+      "next_question": "시장이 회사에 얼마의 가격을 붙였는지 알았다면, 회사가 실제 사업에서 얼마나 벌고 남겼는지는 어디서 볼까?",
+      "source_refs": [
+        "S03",
+        "S04"
+      ]
+    },
+    {
+      "lesson_id": "L04",
+      "concept_ids": [
+        "C_REVENUE",
+        "C_EXPENSE",
+        "C_NET_INCOME"
+      ],
+      "title": "많이 팔았다는 것과 많이 남겼다는 것은 같을까?",
+      "hook_question": "매출이 늘면 회사의 순이익도 반드시 늘어날까?",
+      "prerequisite_ids": [
+        "C_COMPANY"
+      ],
+      "learning_objectives": [
+        "매출과 비용, 순이익의 역할을 구분한다.",
+        "매출이 크다는 사실만으로 수익성이 높다고 결론 내리지 않는다.",
+        "순이익과 현금흐름이 같은 개념이 아님을 인지한다."
+      ],
+      "brief": {
+        "title": "팔아서 번 돈과\n남는 돈은 달라요.",
+        "core": "매출에서 비용과 세금 등을 빼고 남은 이익이 순이익이에요.",
+        "example": "매출 10,000원 − 총비용 8,000원",
+        "result": "= 순이익 2,000원",
+        "remember": "순이익은 통장에 늘어난 현금과 다를 수 있어요."
+      },
+      "exercise": {
+        "title": "비용이 늘면\n얼마가 남을까요?",
+        "fixed_label": "매출",
+        "fixed": 10000,
+        "fixed_unit": "원",
+        "input_label": "총비용",
+        "values": [
+          6000,
+          8000,
+          10000
+        ],
+        "input_unit": "원",
+        "operation": "profit",
+        "result_label": "순이익",
+        "result_unit": "원",
+        "assumption": "총비용에 모든 비용과 세금을 포함한 단순 예시예요."
+      },
+      "short_title": "매출과 이익",
+      "pages": [
+        {
+          "title": "많이 팔았다는 것과 많이 남겼다는 것은 같을까?",
+          "body": "회사가 상품이나 서비스를 판매해 **얼마나 벌어들였는지의 출발점**이 매출이다. 하지만 제품을 만들고, 직원을 고용하고, 광고하고, 이자를 내고, 세금을 내는 등 사업에는 비용이 든다.\n\n따라서 초급 예시는 다음처럼 생각할 수 있다.\n\n```text\n매출 - 여러 비용 = 최종적으로 남는 순이익(단순화)\n```\n\n하지만 실제 손익계산서는 여러 단계와 항목으로 구성된다."
+        },
+        {
+          "title": "계산 예시",
+          "body": "학습을 위해 모든 비용과 세금을 합쳐 계산해요.\n\n- 매출: 10,000원\n- 총비용: 8,000원\n- 순이익: `10,000 − 8,000 = 2,000원`\n\n10,000원을 팔아도 전부 이익으로 남는 것은 아니에요. 실제 손익계산서는 영업외 수익과 비용 등 더 많은 항목을 반영해요."
+        },
+        {
+          "title": "매출이 늘었는데 이익이 줄 수도 있다",
+          "body": "| 구분 | 전년 | 올해 |\n|---|---:|---:|\n| 매출 | 10,000원 | 12,000원 |\n| 총비용 | 8,000원 | 11,000원 |\n| 순이익 | 2,000원 | 1,000원 |\n\n매출이 늘어도 비용이 더 많이 늘면 남는 이익은 줄어요."
+        },
+        {
+          "title": "순이익과 현금흐름은 다르다",
+          "body": "손익계산서의 순이익은 회계기준에 따라 인식된 수익과 비용의 결과다. 실제 현금 유입·유출 시점과 항상 일치하지 않는다. 감가상각 같은 비현금 비용, 매출채권·재고 변화 등으로 인해 **순이익과 현금흐름은 서로 다를 수 있다.**\n\nMVP에서는 현금흐름표를 계산하지 않지만, `순이익 = 현금 증가액`이라는 오개념은 명확히 막는다."
+        }
+      ],
+      "summary": "매출은 얼마나 팔았는지, 순이익은 여러 비용을 반영한 뒤 최종적으로 얼마의 이익이 남았는지를 보는 서로 다른 숫자다.",
+      "next_question": "회사 전체의 순이익을 ‘주식 한 주당’ 기준으로 바꾸면 어떤 숫자가 될까?",
+      "source_refs": [
+        "S05",
+        "S06"
+      ]
+    },
+    {
+      "lesson_id": "L05",
+      "concept_ids": [
+        "C_NET_INCOME",
+        "C_SHARES_OUTSTANDING",
+        "C_WEIGHTED_AVG_SHARES",
+        "C_BASIC_EPS",
+        "C_DILUTED_EPS"
+      ],
+      "title": "회사의 이익을 주당 기준으로 보면?",
+      "hook_question": "순이익이 같은 두 회사라도 주식 수가 다르면 한 주당 이익은 같을까?",
+      "prerequisite_ids": [
+        "C_NET_INCOME",
+        "C_SHARE"
+      ],
+      "learning_objectives": [
+        "EPS가 이익을 주당 기준으로 나타내는 지표임을 설명한다.",
+        "기본 EPS 계산에서 기간의 가중평균 유통보통주식수가 중요함을 이해한다.",
+        "EPS와 배당금을 구분한다.",
+        "기본 EPS와 희석 EPS가 별도로 존재한다는 사실을 인지한다."
+      ],
+      "brief": {
+        "title": "EPS는\n한 주당 이익이에요.",
+        "core": "보통주 몫의 이익을 주식 수로 나눠요.",
+        "example": "이익 10,000원 ÷ 주식 10주",
+        "result": "= EPS 1,000원",
+        "remember": "이 예시는 1년 내내 주식 수가 같아요. EPS가 배당금은 아니에요."
+      },
+      "exercise": {
+        "title": "같은 이익을\n더 많은 주식으로 나누면?",
+        "fixed_label": "보통주 몫의 이익",
+        "fixed": 10000,
+        "fixed_unit": "원",
+        "input_label": "1년 내내 같은 주식 수",
+        "values": [
+          5,
+          10,
+          20
+        ],
+        "input_unit": "주",
+        "operation": "eps",
+        "result_label": "한 주당 이익 · EPS",
+        "result_unit": "원",
+        "assumption": "보통주만 있고, 각 경우의 주식 수는 1년 내내 같아요."
+      },
+      "short_title": "EPS",
+      "pages": [
+        {
+          "title": "회사의 이익을 주당 기준으로 보면?",
+          "body": "EPS(Earnings per Share)는 **기업의 이익을 주식 한 주 기준으로 나누어 보는 지표**다.\n\n초급 문제에서는 다음처럼 시작할 수 있다.\n\n```text\n교육용 단순식:\nEPS ≈ 보통주에 귀속되는 이익 ÷ 기간의 평균적인 보통주식수\n```\n\n예를 들어 보통주에 귀속되는 이익이 12,000원이고, 학습 문제에서 사용하도록 주어진 가중평균 주식 수가 6주라면:\n\n```text\n12,000원 ÷ 6주 = 2,000원/주\n```\n\n기본 EPS는 **2,000원**이다."
+        },
+        {
+          "title": "왜 기말 주식수만 사용하지 않을까?",
+          "body": "1년 도중에 주식 수가 바뀌면, 각 주식 수가 유지된 기간까지 반영해요.\n\n- 앞 6개월: 4주\n- 뒤 6개월: 6주\n- 1년간 보통주 몫의 이익: 10,000원\n\n기간을 반영한 평균 주식 수는 `4 × 0.5 + 6 × 0.5 = 5주`예요.\n기본 EPS는 `10,000원 ÷ 5주 = 2,000원`이에요.\n\n기말의 6주만 넣으면 기간 중 변화를 놓쳐요. 기본 학습 예시는 이 부담을 줄이기 위해 주식 수가 1년 내내 같다고 가정해요."
+        },
+        {
+          "title": "EPS는 배당금이 아니다",
+          "body": "EPS 2,000원이라고 해서 주주가 반드시 주당 2,000원을 현금으로 받는 것은 아니다. EPS는 **주당 이익 지표**이고, 배당은 기업이 실제로 주주에게 분배하기로 한 금액이다. 기업은 이익의 일부를 배당하고 일부를 유보할 수도 있으며 배당하지 않을 수도 있다."
+        },
+        {
+          "title": "기본 EPS와 희석 EPS",
+          "body": "상장기업의 재무제표에서는 `Basic EPS`와 `Diluted EPS`가 함께 제시될 수 있다.\n\n- **기본 EPS:** 실제 보통주와 관련된 기본적인 주당이익 계산\n- **희석 EPS:** 전환사채, 옵션, 워런트 등 희석 효과가 있는 잠재적 보통주가 보통주로 바뀌는 효과까지 반영한 계산\n\nMVP에서는 희석 EPS를 직접 계산시키지 않고 “실제 공시에는 두 종류가 있을 수 있다”는 수준까지만 소개한다."
+        }
+      ],
+      "summary": "EPS는 이익을 한 주 기준으로 바꾼 숫자다. 실제 기본 EPS는 보통주 귀속이익과 기간 가중평균 보통주식수를 사용한다.",
+      "next_question": "한 주의 가격인 주가와 한 주당 이익인 EPS를 함께 비교하면 어떤 정보를 얻을 수 있을까?",
+      "source_refs": [
+        "S07",
+        "S08",
+        "S09"
+      ]
+    },
+    {
+      "lesson_id": "L06",
+      "concept_ids": [
+        "C_SHARE_PRICE",
+        "C_BASIC_EPS",
+        "C_PE_RATIO",
+        "C_INFORMATION_LIMIT"
+      ],
+      "title": "주가와 주당이익을 함께 보면 무엇이 달라질까?",
+      "hook_question": "주가가 더 낮은 회사가 이익 대비로도 더 낮은 가격일까?",
+      "prerequisite_ids": [
+        "C_SHARE_PRICE",
+        "C_BASIC_EPS"
+      ],
+      "learning_objectives": [
+        "PER 산식을 정확히 적용한다.",
+        "주가가 낮은 것과 PER이 낮은 것을 구분한다.",
+        "PER이 시장가격과 이익의 관계를 나타내지만 투자매력 전체를 판정하지는 않음을 설명한다.",
+        "EPS가 음수일 때 일반적인 PER 비교가 어려워짐을 인지한다."
+      ],
+      "brief": {
+        "title": "PER은 주가가\nEPS의 몇 배인지예요.",
+        "core": "주가를 한 주당 이익인 EPS로 나눠요.",
+        "example": "주가 10,000원 ÷ EPS 1,000원",
+        "result": "= PER 10배",
+        "remember": "이 예시는 같은 기간의 양수 EPS를 써요. 낮다고 무조건 좋은 투자는 아니에요."
+      },
+      "exercise": {
+        "title": "EPS가 같을 때\n주가를 바꿔봐요.",
+        "fixed_label": "EPS",
+        "fixed": 1000,
+        "fixed_unit": "원",
+        "input_label": "주가",
+        "values": [
+          5000,
+          10000,
+          20000
+        ],
+        "input_unit": "원",
+        "operation": "pe_price",
+        "result_label": "PER",
+        "result_unit": "배",
+        "assumption": "같은 기간·기준의 양수 EPS를 사용해요."
+      },
+      "short_title": "PER",
+      "pages": [
+        {
+          "title": "주가와 주당이익을 함께 보면 무엇이 달라질까?",
+          "body": "```text\nPER(P/E) = 주가 ÷ EPS\n```\n\n단위는 보통 `배`로 표현한다.\n\n예를 들어 주가가 20,000원이고 EPS가 2,000원이면:\n\n`20,000 ÷ 2,000 = 10`\n\n→ PER은 **10배**다."
+        },
+        {
+          "title": "두 회사 비교",
+          "body": "| 가상 회사 | 주가 | EPS | PER |\n|---|---:|---:|---:|\n| A회사 | 20,000원 | 2,000원 | 10배 |\n| B회사 | 10,000원 | 500원 | 20배 |\n\nB회사의 주가는 A회사보다 낮지만, EPS까지 함께 보면 B회사의 PER은 오히려 더 높다.\n\n따라서:\n\n- `주가가 낮다`와\n- `이익 대비 주가의 배수가 낮다`\n\n는 같은 말이 아니다."
+        },
+        {
+          "title": "“PER 10배면 10년이면 원금을 회수한다?”",
+          "body": "이 표현은 직관적 비유로 등장하지만 **보장된 회수기간으로 이해하면 틀리다.** 미래 EPS는 변할 수 있고, 회사가 EPS만큼 현금을 전부 주주에게 지급하는 것도 아니며, 주가도 계속 변한다.\n\n앱에서는 PER을 `가격/이익 비율`로 설명하고 `회수기간`이라는 확정 표현은 사용하지 않는다."
+        },
+        {
+          "title": "EPS가 0 또는 음수라면",
+          "body": "EPS가 0이면 `주가 ÷ 0`은 정의할 수 없다. EPS가 음수면 수학적으로 음의 비율이 나오지만, 일반적인 양수 PER과 같은 방식으로 가치배수를 비교하기 어렵기 때문에 데이터 서비스에서는 `N/A` 등으로 표시하기도 한다.\n\n초급 PER 비교 문제에서는 원칙적으로 **양수 EPS**를 사용한다."
+        }
+      ],
+      "summary": "PER = 주가 ÷ EPS. 주가와 이익을 함께 비교하는 비율이지만, PER 하나만으로 좋은 투자·저평가 여부를 확정할 수 없다.",
+      "next_question": "PER이 어제 20배였는데 오늘 15배가 됐다면, 무엇이 변한 것일까? 주가일까, EPS일까, 둘 다일까?",
+      "source_refs": [
+        "S10",
+        "S05"
+      ]
+    },
+    {
+      "lesson_id": "L07",
+      "concept_ids": [
+        "C_SHARE_PRICE",
+        "C_SHARES_OUTSTANDING",
+        "C_MARKET_CAP",
+        "C_BASIC_EPS",
+        "C_PE_RATIO"
+      ],
+      "title": "같은 지표가 달라지는 이유는 하나뿐일까?",
+      "hook_question": "PER이 내려가면 항상 주가가 하락한 것일까?",
+      "prerequisite_ids": [
+        "C_MARKET_CAP",
+        "C_BASIC_EPS",
+        "C_PE_RATIO"
+      ],
+      "learning_objectives": [
+        "비율의 분자와 분모를 나누어 변화를 분석한다.",
+        "다른 조건을 고정했을 때 각 변수 변화의 방향을 설명한다.",
+        "실제 시장에서는 여러 변수가 동시에 변할 수 있음을 구분한다."
+      ],
+      "brief": {
+        "title": "PER이 내려간 이유는\n하나가 아니에요.",
+        "core": "주가가 내려가도, EPS가 올라가도 PER은 낮아질 수 있어요.",
+        "example": "주가 20,000원 그대로, EPS 1,000 → 2,000원",
+        "result": "PER은 20배 → 10배가 돼요.",
+        "remember": "무엇이 바뀌고 무엇이 그대로인지 먼저 봐요."
+      },
+      "exercise": {
+        "title": "주가는 그대로,\nEPS만 올라가면?",
+        "fixed_label": "주가",
+        "fixed": 20000,
+        "fixed_unit": "원",
+        "input_label": "EPS",
+        "values": [
+          1000,
+          2000,
+          4000
+        ],
+        "input_unit": "원",
+        "operation": "pe_eps",
+        "result_label": "PER",
+        "result_unit": "배",
+        "assumption": "주가는 고정하고 같은 기준의 EPS만 바꿔요."
+      },
+      "short_title": "숫자가 변하는 이유",
+      "pages": [
+        {
+          "title": "한 변수씩 바꿔보기",
+          "body": "| 상황 | 주가 | EPS | PER | 설명 |\n|---|---:|---:|---:|---|\n| 기준 | 30,000원 | 1,500원 | 20배 | 기준 상태 |\n| A | 36,000원 | 1,500원 | 24배 | EPS가 같고 주가만 오르면 PER 상승 |\n| B | 30,000원 | 2,000원 | 15배 | 주가가 같고 EPS만 오르면 PER 하락 |\n| C | 36,000원 | 2,000원 | 18배 | 둘 다 변하면 결과는 상대적 변화에 따라 결정 |\n\n따라서 `PER이 하락했다 → 주가가 하락했다`는 결론은 성립하지 않는다. **EPS가 증가해서 PER이 낮아졌을 수도 있다.**"
+        },
+        {
+          "title": "역으로 원인을 하나로 확정할 수 없는 이유",
+          "body": "PER은 두 숫자의 비율이다.\n\n```text\nPER = P / E\n```\n\nPER만 20배에서 15배로 변했다는 사실만 알고 있다면 가능한 경우는 여러 개다.\n\n- P가 낮아짐, E는 동일\n- P는 동일, E가 높아짐\n- P와 E가 모두 변했지만 E 증가율이 상대적으로 큼\n- 시점/기간 기준이 바뀜\n\n따라서 비율 변화의 원인을 확인하려면 분자와 분모를 각각 확인해야 한다."
+        },
+        {
+          "title": "변화 문제를 푸는 3단계",
+          "body": "1. **공식을 적는다.** 무엇이 분자이고 분모인지 확인한다.\n2. **문제에서 고정된 값을 찾는다.** “다른 조건은 동일”이 명시되었는지 본다.\n3. **실제 시장 설명인지 수학 관계 확인인지 구분한다.** 학습 문제의 ceteris paribus(다른 조건 동일)와 현실 예측을 섞지 않는다."
+        }
+      ],
+      "summary": "비율이 변했다면 분자와 분모를 각각 확인한다. 결과 숫자 하나만 보고 변화 원인을 하나로 단정하지 않는다.",
+      "next_question": "이제 주가·시가총액·매출·순이익·EPS·PER을 한 회사 사례에서 함께 읽어보면 어디까지 판단할 수 있을까?",
+      "source_refs": [
+        "S03",
+        "S07",
+        "S10"
+      ]
+    },
+    {
+      "lesson_id": "L08",
+      "concept_ids": [
+        "C_SHARE_PRICE",
+        "C_SHARES_OUTSTANDING",
+        "C_MARKET_CAP",
+        "C_REVENUE",
+        "C_EXPENSE",
+        "C_NET_INCOME",
+        "C_BASIC_EPS",
+        "C_PE_RATIO",
+        "C_INFORMATION_LIMIT"
+      ],
+      "title": "숫자를 연결해서 읽고, 모르는 것은 모른다고 말하기",
+      "hook_question": "숫자가 여러 개 주어졌을 때 무엇을 비교할 수 있고 무엇은 아직 판단할 수 없을까?",
+      "prerequisite_ids": [
+        "C_MARKET_CAP",
+        "C_NET_INCOME",
+        "C_BASIC_EPS",
+        "C_PE_RATIO"
+      ],
+      "learning_objectives": [
+        "여러 지표를 같은 사례에서 연결해 계산하고 비교한다.",
+        "서로 다른 지표가 답하는 질문을 구분한다.",
+        "주어진 정보만으로 판단할 수 없는 문제를 식별한다."
+      ],
+      "brief": {
+        "title": "숫자로 아는 것과\n더 알아볼 것을 나눠요.",
+        "core": "시가총액과 PER은 비교할 수 있지만, 좋은 투자까지 정해주지는 않아요.",
+        "example": "A회사 PER 5배, B회사 PER 10배",
+        "result": "A의 PER이 더 낮다는 것만 알 수 있어요.",
+        "remember": "성장 가능성과 위험 같은 정보도 필요해요."
+      },
+      "short_title": "연결해서 읽기",
+      "pages": [
+        {
+          "title": "통합 가상 사례",
+          "body": "같은 회계기간의 학습용 가상 회사예요. 보통주만 있고, 주식 수는 1년 내내 같다고 가정해요.\n\n| 항목 | A회사 | B회사 |\n|---|---:|---:|\n| 주가 | 10,000원 | 5,000원 |\n| 주식 수 | 4주 | 10주 |\n| 매출 | 50,000원 | 80,000원 |\n| 총비용 | 42,000원 | 75,000원 |\n| 순이익 | 8,000원 | 5,000원 |\n| EPS | 2,000원 | 500원 |\n| PER | 5배 | 10배 |\n| 시가총액 | 40,000원 | 50,000원 |\n\nA회사: 시가총액 `10,000 × 4 = 40,000원`, EPS `8,000 ÷ 4 = 2,000원`, PER `10,000 ÷ 2,000 = 5배`.\n\nB회사: 시가총액 `5,000 × 10 = 50,000원`, EPS `5,000 ÷ 10 = 500원`, PER `5,000 ÷ 500 = 10배`.\n\nB회사의 주가가 더 낮아도 시가총액은 더 커요. A회사의 PER이 더 낮아도 더 좋은 투자라고 단정할 수는 없어요."
+        },
+        {
+          "title": "이 표만으로 말할 수 있는 것",
+          "body": "- B회사의 **주가**가 더 낮다.\n- B회사의 **시가총액**은 더 크다.\n- B회사의 **매출**은 더 크다.\n- A회사의 **순이익**은 더 크다.\n- A회사의 **EPS**가 더 높다.\n- A회사의 **PER**이 더 낮다.\n\n이 문장들은 표의 숫자와 산식으로 직접 확인할 수 있다."
+        },
+        {
+          "title": "이 표만으로 말할 수 없는 것",
+          "body": "다음 결론에는 추가 정보가 필요하다.\n\n- 어느 회사가 미래에 더 빨리 성장할 것인가?\n- 어느 회사의 이익이 더 지속가능한가?\n- 어느 회사의 부채 부담이 더 큰가?\n- 어느 회사가 현금을 더 잘 창출하는가?\n- 어느 회사의 경영진이 더 우수한가?\n- 어느 회사가 현재 `저평가`되어 있는가?\n- 어느 주식을 사야 하는가?\n\n필요할 수 있는 추가 정보:\n\n- 과거 여러 기간의 매출·이익 추세\n- 영업현금흐름·잉여현금흐름\n- 부채와 현금\n- 사업 부문과 경쟁환경\n- 이익의 일회성 요인\n- 미래 성장 전망과 불확실성\n- 주식 발행·자사주·희석 요인\n- 산업 특성과 비교기업"
+        },
+        {
+          "title": "“추가 정보가 필요하다”도 정답이다",
+          "body": "금융 학습에서 중요한 능력은 모든 문제에 즉시 결론을 내리는 것이 아니다. **현재 가진 정보가 어떤 질문에 충분하고 어떤 질문에는 부족한지를 구분하는 것**도 핵심 학습 결과다.\n\n예:\n\n> “A의 PER이 더 낮으니 A가 더 좋은 투자다.”\n\n이 문장은 주어진 데이터만으로는 확정할 수 없다. 정확한 답은:\n\n> “A의 PER이 더 낮다는 것은 확인할 수 있지만, 투자 매력 전체를 판단하려면 성장·위험·현금흐름·재무구조 등 추가 정보가 필요하다.”"
+        }
+      ],
+      "summary": "주가·시가총액·이익·EPS·PER을 연결하고, 추가 정보가 필요한 판단을 구분했어요.",
+      "next_question": "",
+      "source_refs": [
+        "S03",
+        "S05",
+        "S07",
+        "S10"
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "concept_id": "C_COMPANY",
+      "name_ko": "기업",
+      "name_en": "Company / Corporation",
+      "category": "entity",
+      "level": 0,
+      "short_definition": "재화나 서비스를 제공하는 경제 주체이며, 주식회사의 경우 지분을 주식 단위로 나누어 발행할 수 있다.",
+      "prerequisite_ids": [],
+      "lesson_ids": [
+        "L01",
+        "L04",
+        "L08"
+      ],
+      "formula": null,
+      "misconception_tags": [
+        "company_equals_stock",
+        "company_value_equals_share_price"
+      ],
+      "time_sensitive": false
+    },
+    {
+      "concept_id": "C_COMMON_STOCK",
+      "name_ko": "보통주",
+      "name_en": "Common Stock / Ordinary Share",
+      "category": "security",
+      "level": 1,
+      "short_definition": "기업에 대한 지분을 나타내는 대표적인 주식 종류. 일반적으로 의결권이 있으며 기업의 성과와 잔여가치에 대한 지분을 가진다.",
+      "prerequisite_ids": [
+        "C_COMPANY"
+      ],
+      "lesson_ids": [
+        "L01"
+      ],
+      "formula": null,
+      "misconception_tags": [
+        "stock_is_loan",
+        "dividend_is_guaranteed",
+        "shareholder_owns_specific_asset"
+      ],
+      "time_sensitive": false
+    },
+    {
+      "concept_id": "C_SHARE",
+      "name_ko": "주식 한 주",
+      "name_en": "One Share",
+      "category": "security_unit",
+      "level": 1,
+      "short_definition": "회사 지분을 나눈 단위 중 하나. 한 주를 보유하면 해당 주식 종류가 부여하는 권리와 경제적 이해관계의 일부를 가진다.",
+      "prerequisite_ids": [
+        "C_COMPANY",
+        "C_COMMON_STOCK"
+      ],
+      "lesson_ids": [
+        "L01",
+        "L02"
+      ],
+      "formula": null,
+      "misconception_tags": [
+        "one_share_means_one_percent",
+        "share_is_company_asset"
+      ],
+      "time_sensitive": false
+    },
+    {
+      "concept_id": "C_SHAREHOLDER",
+      "name_ko": "주주",
+      "name_en": "Shareholder / Stockholder",
+      "category": "participant",
+      "level": 1,
+      "short_definition": "회사의 주식을 보유하여 지분 이해관계를 가진 사람 또는 기관.",
+      "prerequisite_ids": [
+        "C_SHARE"
+      ],
+      "lesson_ids": [
+        "L01"
+      ],
+      "formula": null,
+      "misconception_tags": [
+        "shareholder_directly_controls_company_assets"
+      ],
+      "time_sensitive": false
+    },
+    {
+      "concept_id": "C_SHARE_PRICE",
+      "name_ko": "주가",
+      "name_en": "Share Price / Stock Price",
+      "category": "market_metric",
+      "level": 2,
+      "short_definition": "시장에서 특정 주식 한 주에 형성되는 가격.",
+      "prerequisite_ids": [
+        "C_SHARE"
+      ],
+      "lesson_ids": [
+        "L02",
+        "L03",
+        "L06",
+        "L07",
+        "L08"
+      ],
+      "formula": null,
+      "misconception_tags": [
+        "low_price_means_cheap_company",
+        "high_price_means_large_company",
+        "share_price_equals_company_value"
+      ],
+      "time_sensitive": true
+    },
+    {
+      "concept_id": "C_SHARES_OUTSTANDING",
+      "name_ko": "유통주식수",
+      "name_en": "Shares Outstanding",
+      "category": "share_count",
+      "level": 2,
+      "short_definition": "특정 시점에 발행되어 투자자 등이 보유하고 있는 주식 수. 시가총액 계산에서 주가와 함께 사용되는 핵심 수량이다.",
+      "prerequisite_ids": [
+        "C_SHARE"
+      ],
+      "lesson_ids": [
+        "L03",
+        "L05",
+        "L07",
+        "L08"
+      ],
+      "formula": null,
+      "misconception_tags": [
+        "outstanding_equals_float",
+        "outstanding_always_constant",
+        "outstanding_equals_weighted_average_shares"
+      ],
+      "time_sensitive": true,
+      "basis_note": "데이터 제공처와 주식 종류·자기주식 처리 등에 따라 표시 기준을 확인해야 한다."
+    },
+    {
+      "concept_id": "C_MARKET_CAP",
+      "name_ko": "시가총액",
+      "name_en": "Market Capitalization",
+      "category": "market_metric",
+      "level": 3,
+      "short_definition": "시장이 특정 시점에 회사의 주식 전체에 부여하고 있는 시장가치의 대표적 척도.",
+      "prerequisite_ids": [
+        "C_SHARE_PRICE",
+        "C_SHARES_OUTSTANDING"
+      ],
+      "lesson_ids": [
+        "L03",
+        "L07",
+        "L08"
+      ],
+      "formula": "market_cap = share_price × shares_outstanding",
+      "misconception_tags": [
+        "market_cap_equals_revenue",
+        "market_cap_equals_net_income",
+        "market_cap_equals_book_equity",
+        "market_cap_equals_enterprise_value"
+      ],
+      "time_sensitive": true,
+      "basis_note": "학습 예시는 하나의 보통주 종류와 명시된 주식 수를 가정한다."
+    },
+    {
+      "concept_id": "C_REVENUE",
+      "name_ko": "매출",
+      "name_en": "Revenue",
+      "category": "financial_statement_metric",
+      "level": 2,
+      "short_definition": "일정 기간 기업이 제품 판매나 서비스 제공 등 주요 활동을 통해 인식한 수익의 대표적 금액.",
+      "prerequisite_ids": [
+        "C_COMPANY"
+      ],
+      "lesson_ids": [
+        "L04",
+        "L08"
+      ],
+      "formula": null,
+      "misconception_tags": [
+        "revenue_equals_cash_inflow",
+        "revenue_equals_profit",
+        "more_revenue_always_means_more_profit"
+      ],
+      "time_sensitive": false,
+      "basis_note": "실제 회계의 수익 인식은 계약과 회계기준에 따라 판단된다. MVP에서는 단순 손익계산 예시를 사용한다."
+    },
+    {
+      "concept_id": "C_EXPENSE",
+      "name_ko": "비용",
+      "name_en": "Expense",
+      "category": "financial_statement_metric",
+      "level": 2,
+      "short_definition": "일정 기간 기업이 수익을 창출하고 사업을 운영하는 과정 등에서 인식한 경제적 자원의 소모.",
+      "prerequisite_ids": [
+        "C_COMPANY"
+      ],
+      "lesson_ids": [
+        "L04",
+        "L08"
+      ],
+      "formula": null,
+      "misconception_tags": [
+        "expense_equals_cash_outflow",
+        "all_expense_is_cost_of_goods_sold"
+      ],
+      "time_sensitive": false
+    },
+    {
+      "concept_id": "C_NET_INCOME",
+      "name_ko": "당기순이익",
+      "name_en": "Net Income / Net Profit",
+      "category": "financial_statement_metric",
+      "level": 3,
+      "short_definition": "일정 기간의 수익에서 관련 비용과 세금 등을 반영한 뒤 남는 최종 손익의 대표적 지표.",
+      "prerequisite_ids": [
+        "C_REVENUE",
+        "C_EXPENSE"
+      ],
+      "lesson_ids": [
+        "L04",
+        "L05",
+        "L08"
+      ],
+      "formula": "educational_example_only: net_income = revenue - total_expenses",
+      "misconception_tags": [
+        "net_income_equals_cash_flow",
+        "positive_net_income_means_cash_increased",
+        "net_income_equals_revenue"
+      ],
+      "time_sensitive": false,
+      "basis_note": "실제 손익계산서에는 다양한 수익·비용 항목과 표시 기준이 존재한다."
+    },
+    {
+      "concept_id": "C_WEIGHTED_AVG_SHARES",
+      "name_ko": "가중평균유통보통주식수",
+      "name_en": "Weighted-average Ordinary/Common Shares Outstanding",
+      "category": "accounting_denominator",
+      "level": 4,
+      "short_definition": "EPS 계산 대상 기간 동안 유통된 보통주 수를 유통 기간에 따라 가중하여 계산한 주식 수.",
+      "prerequisite_ids": [
+        "C_SHARES_OUTSTANDING"
+      ],
+      "lesson_ids": [
+        "L05"
+      ],
+      "formula": "weighted_average_shares = Σ(shares_outstanding_for_interval × time_weight)",
+      "misconception_tags": [
+        "eps_uses_only_period_end_shares",
+        "weighted_average_equals_current_shares"
+      ],
+      "time_sensitive": false
+    },
+    {
+      "concept_id": "C_BASIC_EPS",
+      "name_ko": "기본주당이익",
+      "name_en": "Basic Earnings per Share (Basic EPS)",
+      "category": "per_share_metric",
+      "level": 4,
+      "short_definition": "보통주에 귀속되는 기간 이익을 해당 기간의 가중평균 유통보통주식수로 나누어 주당 기준으로 나타낸 이익 지표.",
+      "prerequisite_ids": [
+        "C_NET_INCOME",
+        "C_WEIGHTED_AVG_SHARES"
+      ],
+      "lesson_ids": [
+        "L05",
+        "L06",
+        "L07",
+        "L08"
+      ],
+      "formula": "basic_eps = earnings_attributable_to_ordinary_equity_holders / weighted_average_ordinary_shares",
+      "misconception_tags": [
+        "eps_equals_dividend",
+        "eps_equals_cash_per_share",
+        "eps_uses_current_share_count_only",
+        "high_eps_always_means_better_company"
+      ],
+      "time_sensitive": false,
+      "basis_note": "MVP 계산 예시는 우선주·중단영업·복잡한 자본변동이 없는 가상 기업으로 단순화한다."
+    },
+    {
+      "concept_id": "C_DILUTED_EPS",
+      "name_ko": "희석주당이익",
+      "name_en": "Diluted Earnings per Share",
+      "category": "per_share_metric",
+      "level": 5,
+      "short_definition": "전환증권, 옵션 등 희석 효과가 있는 잠재적 보통주가 실제 보통주가 된 상황을 반영해 계산하는 EPS.",
+      "prerequisite_ids": [
+        "C_BASIC_EPS"
+      ],
+      "lesson_ids": [
+        "L05"
+      ],
+      "formula": "advanced_not_in_mvp_calculation",
+      "misconception_tags": [
+        "diluted_eps_is_forecast_eps",
+        "diluted_eps_always_lower_without_conditions"
+      ],
+      "time_sensitive": false,
+      "mvp_role": "awareness_only"
+    },
+    {
+      "concept_id": "C_PE_RATIO",
+      "name_ko": "주가수익비율(PER)",
+      "name_en": "Price-to-Earnings Ratio (P/E Ratio)",
+      "category": "valuation_ratio",
+      "level": 5,
+      "short_definition": "주가가 주당이익(EPS)의 몇 배 수준인지 나타내는 비율.",
+      "prerequisite_ids": [
+        "C_SHARE_PRICE",
+        "C_BASIC_EPS"
+      ],
+      "lesson_ids": [
+        "L06",
+        "L07",
+        "L08"
+      ],
+      "formula": "pe_ratio = share_price / eps",
+      "misconception_tags": [
+        "low_pe_means_undervalued",
+        "high_pe_means_overvalued",
+        "pe_is_payback_period",
+        "pe_alone_decides_investment",
+        "negative_eps_pe_is_normally_comparable"
+      ],
+      "time_sensitive": true,
+      "basis_note": "가격 시점과 EPS 기간/기준을 일치시켜 해석해야 한다. MVP에서는 명시된 같은 기준의 양수 EPS만 계산 문제에 사용한다."
+    },
+    {
+      "concept_id": "C_INFORMATION_LIMIT",
+      "name_ko": "지표로 알 수 있는 것과 알 수 없는 것",
+      "name_en": "Limits of a Metric",
+      "category": "reasoning_skill",
+      "level": 6,
+      "short_definition": "하나의 숫자나 비율이 설명하는 범위와, 결론을 내리기 위해 추가 정보가 필요한 범위를 구분하는 능력.",
+      "prerequisite_ids": [
+        "C_MARKET_CAP",
+        "C_NET_INCOME",
+        "C_BASIC_EPS",
+        "C_PE_RATIO"
+      ],
+      "lesson_ids": [
+        "L06",
+        "L07",
+        "L08"
+      ],
+      "formula": null,
+      "misconception_tags": [
+        "one_metric_is_enough",
+        "metric_is_investment_signal",
+        "correlation_means_cause"
+      ],
+      "time_sensitive": false
+    }
+  ],
+  "cards": {
+    "C_SHARE": {
+      "name": "주식 한 주",
+      "one_liner": "회사 지분을 나눈 한 단위.",
+      "remember": "한 주가 회사의 몇 %인지는 전체 주식 수에 따라 달라진다.",
+      "not_equal_to": "회사에 빌려준 돈, 회사 자산 한 조각의 직접 소유권"
+    },
+    "C_SHARE_PRICE": {
+      "name": "주가",
+      "one_liner": "주식 한 주의 시장가격.",
+      "remember": "한 주의 가격과 회사 전체 시장가치는 다르다.",
+      "not_equal_to": "시가총액, 기업 전체 가치판정"
+    },
+    "C_MARKET_CAP": {
+      "name": "시가총액",
+      "one_liner": "주가와 주식 수를 곱한 주식 전체의 시장가치 규모.",
+      "formula": "주가 × 주식 수",
+      "remember": "주가가 낮아도 주식 수가 많으면 시가총액이 클 수 있다.",
+      "not_equal_to": "매출, 순이익, 장부가치, EV"
+    },
+    "C_REVENUE": {
+      "name": "매출",
+      "one_liner": "일정 기간 제품·서비스 판매 등으로 인식한 수익의 대표적 규모.",
+      "remember": "비용을 빼기 전의 출발점이므로 순이익과 다르다.",
+      "not_equal_to": "순이익, 현금 유입액"
+    },
+    "C_NET_INCOME": {
+      "name": "당기순이익",
+      "one_liner": "일정 기간 수익에서 비용·세금 등을 반영한 최종 손익.",
+      "remember": "이익과 현금흐름은 같은 숫자가 아니다.",
+      "not_equal_to": "매출, 영업현금흐름"
+    },
+    "C_BASIC_EPS": {
+      "name": "기본 EPS",
+      "one_liner": "보통주에 귀속되는 이익을 한 주 기준으로 본 지표.",
+      "formula": "보통주 귀속이익 ÷ 가중평균 유통보통주식수",
+      "remember": "기말 주식수 하나만 사용하는 단순 계산이 아니다.",
+      "not_equal_to": "배당금, 현금흐름/주"
+    },
+    "C_PE_RATIO": {
+      "name": "PER",
+      "one_liner": "주가가 EPS의 몇 배인지 나타내는 비율.",
+      "formula": "주가 ÷ EPS",
+      "remember": "낮다고 자동 저평가, 높다고 자동 고평가가 아니다.",
+      "not_equal_to": "확정 회수기간, 매수·매도 신호"
+    }
+  },
+  "edges": [
+    {
+      "edge_id": "E01",
+      "from": "C_SHARE",
+      "to": "C_COMPANY",
+      "relation_type": "represents",
+      "label_ko": "기업에 대한 지분 단위를 나타낸다",
+      "direction_meaning": "주식 한 주의 의미를 기업의 소유지분과 연결",
+      "strength": "core",
+      "lesson_ids": [
+        "L01"
+      ]
+    },
+    {
+      "edge_id": "E02",
+      "from": "C_SHARE",
+      "to": "C_SHARE_PRICE",
+      "relation_type": "has_price",
+      "label_ko": "시장에서 한 주의 가격이 형성된다",
+      "direction_meaning": "주식 단위와 주가를 구분",
+      "strength": "core",
+      "lesson_ids": [
+        "L02"
+      ]
+    },
+    {
+      "edge_id": "E03",
+      "from": "C_SHARE_PRICE",
+      "to": "C_MARKET_CAP",
+      "relation_type": "formula_dependency",
+      "label_ko": "시가총액 계산의 한 요소다",
+      "direction_meaning": "주가만으로 회사 전체 시장가치를 판단할 수 없음을 설명",
+      "strength": "core",
+      "lesson_ids": [
+        "L03"
+      ]
+    },
+    {
+      "edge_id": "E04",
+      "from": "C_SHARES_OUTSTANDING",
+      "to": "C_MARKET_CAP",
+      "relation_type": "formula_dependency",
+      "label_ko": "시가총액 계산의 다른 요소다",
+      "direction_meaning": "주식 수가 함께 필요함을 설명",
+      "strength": "core",
+      "lesson_ids": [
+        "L03"
+      ]
+    },
+    {
+      "edge_id": "E05",
+      "from": "C_REVENUE",
+      "to": "C_NET_INCOME",
+      "relation_type": "interpretation_dependency",
+      "label_ko": "매출은 최종 이익을 이해하는 출발점 중 하나다",
+      "direction_meaning": "매출과 순이익을 동일시하지 않도록 연결",
+      "strength": "core",
+      "lesson_ids": [
+        "L04"
+      ]
+    },
+    {
+      "edge_id": "E06",
+      "from": "C_EXPENSE",
+      "to": "C_NET_INCOME",
+      "relation_type": "interpretation_dependency",
+      "label_ko": "비용을 반영해야 최종 손익을 이해할 수 있다",
+      "direction_meaning": "많이 팔았다는 사실만으로 많이 남았다고 판단할 수 없음을 설명",
+      "strength": "core",
+      "lesson_ids": [
+        "L04"
+      ]
+    },
+    {
+      "edge_id": "E07",
+      "from": "C_NET_INCOME",
+      "to": "C_BASIC_EPS",
+      "relation_type": "formula_dependency",
+      "label_ko": "보통주에 귀속되는 이익이 EPS 분자에 연결된다",
+      "direction_meaning": "기업 전체 이익을 주당 기준으로 전환",
+      "strength": "core",
+      "lesson_ids": [
+        "L05"
+      ]
+    },
+    {
+      "edge_id": "E08",
+      "from": "C_WEIGHTED_AVG_SHARES",
+      "to": "C_BASIC_EPS",
+      "relation_type": "formula_dependency",
+      "label_ko": "기간 가중평균 주식 수가 EPS 분모에 연결된다",
+      "direction_meaning": "EPS가 단순히 기말 주식수로 나누는 값이 아님을 설명",
+      "strength": "core",
+      "lesson_ids": [
+        "L05"
+      ]
+    },
+    {
+      "edge_id": "E09",
+      "from": "C_SHARES_OUTSTANDING",
+      "to": "C_WEIGHTED_AVG_SHARES",
+      "relation_type": "contrast",
+      "label_ko": "특정 시점 주식 수와 기간 평균 개념을 구분한다",
+      "direction_meaning": "시가총액의 주식 수 기준과 EPS 분모를 동일시하지 않도록 함",
+      "strength": "supporting",
+      "lesson_ids": [
+        "L05"
+      ]
+    },
+    {
+      "edge_id": "E10",
+      "from": "C_SHARE_PRICE",
+      "to": "C_PE_RATIO",
+      "relation_type": "formula_dependency",
+      "label_ko": "PER의 분자다",
+      "direction_meaning": "주가를 이익과 연결해 보는 비율",
+      "strength": "core",
+      "lesson_ids": [
+        "L06"
+      ]
+    },
+    {
+      "edge_id": "E11",
+      "from": "C_BASIC_EPS",
+      "to": "C_PE_RATIO",
+      "relation_type": "formula_dependency",
+      "label_ko": "PER의 분모다",
+      "direction_meaning": "주가만 비교할 때와 다른 정보를 제공",
+      "strength": "core",
+      "lesson_ids": [
+        "L06"
+      ]
+    },
+    {
+      "edge_id": "E12",
+      "from": "C_PE_RATIO",
+      "to": "C_INFORMATION_LIMIT",
+      "relation_type": "limitation",
+      "label_ko": "PER 하나만으로 투자 매력 전체를 판정할 수 없다",
+      "direction_meaning": "계산 결과와 투자 결론을 분리",
+      "strength": "core",
+      "lesson_ids": [
+        "L06",
+        "L08"
+      ]
+    },
+    {
+      "edge_id": "E13",
+      "from": "C_MARKET_CAP",
+      "to": "C_INFORMATION_LIMIT",
+      "relation_type": "limitation",
+      "label_ko": "시가총액은 기업가치의 모든 측면을 설명하지 않는다",
+      "direction_meaning": "부채·현금·사업질·미래수익 등을 별도로 볼 필요가 있음",
+      "strength": "supporting",
+      "lesson_ids": [
+        "L08"
+      ]
+    },
+    {
+      "edge_id": "E14",
+      "from": "C_NET_INCOME",
+      "to": "C_INFORMATION_LIMIT",
+      "relation_type": "limitation",
+      "label_ko": "순이익은 현금흐름과 동일하지 않다",
+      "direction_meaning": "손익과 현금의 차이를 인지",
+      "strength": "supporting",
+      "lesson_ids": [
+        "L08"
+      ]
+    },
+    {
+      "edge_id": "E15",
+      "from": "C_BASIC_EPS",
+      "to": "C_DILUTED_EPS",
+      "relation_type": "contrast",
+      "label_ko": "잠재적 보통주의 희석 효과를 반영하면 희석 EPS를 별도로 본다",
+      "direction_meaning": "실제 공시에서 Basic/Diluted EPS가 구분됨을 인지",
+      "strength": "supporting",
+      "lesson_ids": [
+        "L05"
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "Q_L01_001",
+      "lesson_id": "L01",
+      "concept_ids": [
+        "C_COMMON_STOCK",
+        "C_SHARE"
+      ],
+      "question_type": "single_choice",
+      "skill_type": "concept_discrimination",
+      "difficulty": 1,
+      "prompt": "주식 한 주를 산다는 건 어떤 뜻일까요?",
+      "options": {
+        "A": "회사에 돈을 빌려줘요.",
+        "B": "회사 지분의 한 단위를 가져요.",
+        "C": "회사 건물의 한 칸을 가져요.",
+        "D": "매년 정해진 돈을 받아요."
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "주식은 회사의 소유권을 나눈 지분이에요.",
+      "option_feedback": {
+        "A": "돈을 빌려주는 관계와 주식을 사는 것은 달라요.",
+        "B": "주식 한 주는 회사 지분의 한 단위예요.",
+        "C": "건물은 회사의 자산이에요. 주주가 한 칸을 직접 갖는 것은 아니에요.",
+        "D": "보통주에 정해진 지급이 보장되지는 않아요."
+      },
+      "misconception_tags": [
+        "stock_is_loan",
+        "shareholder_owns_specific_asset"
+      ],
+      "remediation_concept_ids": [
+        "C_COMMON_STOCK",
+        "C_SHARE"
+      ],
+      "source_refs": [
+        "S01",
+        "S02"
+      ],
+      "key_takeaway": "주식은 회사의 소유권을 나눈 지분이에요."
+    },
+    {
+      "question_id": "Q_L01_002",
+      "lesson_id": "L01",
+      "concept_ids": [
+        "C_SHARE"
+      ],
+      "question_type": "single_choice",
+      "skill_type": "calculation",
+      "difficulty": 1,
+      "prompt": "전체 20주 중 2주를 갖고 있어요. 내 지분은?",
+      "options": {
+        "A": "1%",
+        "B": "10%",
+        "C": "20%",
+        "D": "50%"
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "2 ÷ 20 × 100 = 10%예요.",
+      "option_feedback": {
+        "A": "20주의 1%는 0.2주예요.",
+        "B": "20주 중 2주는 10분의 1, 즉 10%예요.",
+        "C": "20%라면 4주가 필요해요.",
+        "D": "50%라면 10주가 필요해요."
+      },
+      "misconception_tags": [
+        "one_share_means_one_percent"
+      ],
+      "remediation_concept_ids": [
+        "C_SHARE"
+      ],
+      "source_refs": [
+        "S01"
+      ],
+      "key_takeaway": "2 ÷ 20 × 100 = 10%예요.",
+      "assumptions": [
+        "모든 주식의 권리는 같아요."
+      ]
+    },
+    {
+      "question_id": "Q_L01_003",
+      "lesson_id": "L01",
+      "concept_ids": [
+        "C_COMMON_STOCK"
+      ],
+      "question_type": "single_choice",
+      "skill_type": "interpretation",
+      "difficulty": 1,
+      "prompt": "주식을 사면 배당을 꼭 받을까요?",
+      "options": {
+        "A": "EPS만큼 꼭 받아요.",
+        "B": "이자처럼 정해진 돈을 받아요.",
+        "C": "회사가 배당을 정하면 받을 수 있어요.",
+        "D": "매출이 생기면 반드시 받아요."
+      },
+      "answer": [
+        "C"
+      ],
+      "explanation": "배당 여부와 금액은 회사의 결정 등에 따라 달라져요.",
+      "option_feedback": {
+        "A": "EPS와 배당금은 달라요.",
+        "B": "보통주 배당은 약속된 이자가 아니에요.",
+        "C": "배당할 수도 있지만, 지급이 보장되지는 않아요.",
+        "D": "매출이 생겼다는 이유만으로 배당이 정해지지는 않아요."
+      },
+      "misconception_tags": [
+        "dividend_is_guaranteed",
+        "eps_equals_dividend"
+      ],
+      "remediation_concept_ids": [
+        "C_COMMON_STOCK"
+      ],
+      "source_refs": [
+        "S02"
+      ],
+      "key_takeaway": "배당 여부와 금액은 회사의 결정 등에 따라 달라져요."
+    },
+    {
+      "question_id": "Q_L01_004",
+      "lesson_id": "L01",
+      "concept_ids": [
+        "C_SHARE",
+        "C_SHAREHOLDER"
+      ],
+      "question_type": "single_choice",
+      "skill_type": "concept_discrimination",
+      "difficulty": 1,
+      "prompt": "빵 회사의 주식을 샀어요. 무엇을 가진 걸까요?",
+      "options": {
+        "A": "회사의 오븐 일부",
+        "B": "회사에 대한 지분",
+        "C": "회사에 빌려준 돈을 받을 권리",
+        "D": "회사 통장에서 돈을 꺼낼 권리"
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "주주는 회사에 대한 지분을 가져요. 회사 자산을 직접 나눠 갖지는 않아요.",
+      "option_feedback": {
+        "A": "오븐은 회사의 자산이에요.",
+        "B": "회사의 소유권을 나눈 지분을 가진 거예요.",
+        "C": "주식은 돈을 빌려준 증서가 아니에요.",
+        "D": "주주가 회사 돈을 마음대로 인출할 수는 없어요."
+      },
+      "misconception_tags": [
+        "shareholder_owns_specific_asset"
+      ],
+      "remediation_concept_ids": [
+        "C_SHAREHOLDER",
+        "C_SHARE"
+      ],
+      "source_refs": [
+        "S01"
+      ],
+      "key_takeaway": "주주는 회사에 대한 지분을 가져요. 회사 자산을 직접 나눠 갖지는 않아요."
+    },
+    {
+      "question_id": "Q_L02_001",
+      "lesson_id": "L02",
+      "concept_ids": [
+        "C_SHARE_PRICE"
+      ],
+      "question_type": "single_choice",
+      "skill_type": "concept_discrimination",
+      "difficulty": 1,
+      "prompt": "주가가 1,000원이에요. 무엇의 가격일까요?",
+      "options": {
+        "A": "회사 전체",
+        "B": "회사의 매출",
+        "C": "주식 한 주",
+        "D": "주주가 받을 배당금"
+      },
+      "answer": [
+        "C"
+      ],
+      "explanation": "주가는 주식 한 주의 시장가격이에요.",
+      "option_feedback": {
+        "A": "회사 전체 주식의 가격은 주식 수도 함께 봐야 해요.",
+        "B": "매출은 회사가 판매 등으로 얻은 수익이에요.",
+        "C": "1,000원은 한 주의 시장가격이에요.",
+        "D": "주가와 배당금은 달라요."
+      },
+      "misconception_tags": [
+        "share_price_equals_company_value"
+      ],
+      "remediation_concept_ids": [
+        "C_SHARE_PRICE"
+      ],
+      "source_refs": [
+        "S03"
+      ],
+      "key_takeaway": "주가는 주식 한 주의 시장가격이에요."
+    },
+    {
+      "question_id": "Q_L02_002",
+      "lesson_id": "L02",
+      "concept_ids": [
+        "C_SHARE_PRICE",
+        "C_MARKET_CAP"
+      ],
+      "question_type": "single_choice",
+      "skill_type": "information_limit",
+      "difficulty": 1,
+      "prompt": "A 주가 10,000원, B 주가 1,000원. 확실히 아는 것은?",
+      "options": {
+        "A": "A의 시가총액이 10배예요.",
+        "B": "A의 한 주 가격이 10배예요.",
+        "C": "A의 순이익이 10배예요.",
+        "D": "B가 더 좋은 투자예요."
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "주가만으로 알 수 있는 것은 한 주 가격의 차이예요.",
+      "option_feedback": {
+        "A": "시가총액은 주식 수도 알아야 해요.",
+        "B": "10,000 ÷ 1,000 = 10배예요.",
+        "C": "주가만으로 순이익은 알 수 없어요.",
+        "D": "투자 판단에는 더 많은 정보가 필요해요."
+      },
+      "misconception_tags": [
+        "high_price_means_large_company",
+        "low_price_means_cheap_company"
+      ],
+      "remediation_concept_ids": [
+        "C_SHARE_PRICE",
+        "C_MARKET_CAP"
+      ],
+      "source_refs": [
+        "S03"
+      ],
+      "key_takeaway": "주가만으로 알 수 있는 것은 한 주 가격의 차이예요."
+    },
+    {
+      "question_id": "Q_L02_003",
+      "lesson_id": "L02",
+      "concept_ids": [
+        "C_SHARE_PRICE",
+        "C_SHARES_OUTSTANDING",
+        "C_MARKET_CAP"
+      ],
+      "question_type": "single_choice",
+      "skill_type": "relationship_application",
+      "difficulty": 1,
+      "prompt": "한 주 4,000원, 전체 10주. 한 주를 2주로 나누면?",
+      "options": {
+        "A": "한 주 2,000원 · 전체 20주",
+        "B": "한 주 8,000원 · 전체 20주",
+        "C": "한 주 2,000원 · 전체 5주",
+        "D": "한 주 4,000원 · 전체 20주"
+      },
+      "answer": [
+        "A"
+      ],
+      "explanation": "주식 수는 2배, 한 주 가격은 절반. 전체는 40,000원으로 같아요.",
+      "option_feedback": {
+        "A": "2,000원 × 20주 = 40,000원이에요.",
+        "B": "조각 수가 늘면 한 조각 가격은 낮아져요.",
+        "C": "한 주를 둘로 나누므로 주식 수는 늘어요.",
+        "D": "주식 수만 늘고 가격이 같으면 전체 금액이 달라져요."
+      },
+      "misconception_tags": [
+        "share_price_equals_company_value"
+      ],
+      "remediation_concept_ids": [
+        "C_SHARE_PRICE",
+        "C_MARKET_CAP"
+      ],
+      "source_refs": [
+        "S03",
+        "S04"
+      ],
+      "key_takeaway": "주식 수는 2배, 한 주 가격은 절반. 전체는 40,000원으로 같아요.",
+      "assumptions": [
+        "주식분할 외의 조건은 같아요."
+      ]
+    },
+    {
+      "question_id": "Q_L02_004",
+      "lesson_id": "L02",
+      "concept_ids": [
+        "C_SHARE_PRICE",
+        "C_INFORMATION_LIMIT"
+      ],
+      "question_type": "single_choice",
+      "skill_type": "interpretation",
+      "difficulty": 1,
+      "prompt": "한 주가 5,000원이라는 사실만 알아요. 맞는 말은?",
+      "options": {
+        "A": "저평가된 회사예요.",
+        "B": "주가 50,000원인 회사보다 작아요.",
+        "C": "한 주의 가격이 5,000원이에요.",
+        "D": "PER이 낮은 회사예요."
+      },
+      "answer": [
+        "C"
+      ],
+      "explanation": "한 주 가격만으로 회사 규모나 저평가 여부는 알 수 없어요.",
+      "option_feedback": {
+        "A": "저평가 여부는 다른 정보도 필요해요.",
+        "B": "주식 수를 모르면 규모를 비교할 수 없어요.",
+        "C": "주가가 알려주는 것은 한 주의 가격이에요.",
+        "D": "PER은 EPS도 알아야 계산해요."
+      },
+      "misconception_tags": [
+        "low_price_means_cheap_company"
+      ],
+      "remediation_concept_ids": [
+        "C_SHARE_PRICE",
+        "C_INFORMATION_LIMIT"
+      ],
+      "source_refs": [
+        "S03"
+      ],
+      "key_takeaway": "한 주 가격만으로 회사 규모나 저평가 여부는 알 수 없어요."
+    },
+    {
+      "question_id": "Q_L03_001",
+      "lesson_id": "L03",
+      "concept_ids": [
+        "C_MARKET_CAP"
+      ],
+      "question_type": "single_choice",
+      "skill_type": "calculation",
+      "difficulty": 1,
+      "prompt": "한 주 2,000원, 전체 20주. 시가총액은?",
+      "options": {
+        "A": "2,000원",
+        "B": "20,000원",
+        "C": "40,000원",
+        "D": "100,000원"
+      },
+      "answer": [
+        "C"
+      ],
+      "explanation": "2,000원 × 20주 = 40,000원이에요.",
+      "option_feedback": {
+        "A": "2,000원은 한 주 가격이에요.",
+        "B": "전체 20주의 가격을 곱해봐요.",
+        "C": "한 주 가격에 전체 주식 수를 곱해요.",
+        "D": "2,000 × 20은 40,000이에요."
+      },
+      "misconception_tags": [],
+      "remediation_concept_ids": [
+        "C_MARKET_CAP"
+      ],
+      "source_refs": [
+        "S03"
+      ],
+      "key_takeaway": "2,000원 × 20주 = 40,000원이에요."
+    },
+    {
+      "question_id": "Q_L03_002",
+      "lesson_id": "L03",
+      "concept_ids": [
+        "C_SHARE_PRICE",
+        "C_SHARES_OUTSTANDING",
+        "C_MARKET_CAP"
+      ],
+      "question_type": "single_choice",
+      "skill_type": "relationship_application",
+      "difficulty": 1,
+      "prompt": "A는 2,000원 × 10주, B는 1,000원 × 30주. 더 큰 시가총액은?",
+      "options": {
+        "A": "B · 30,000원",
+        "B": "A · 20,000원",
+        "C": "둘 다 20,000원",
+        "D": "주가가 높은 A가 무조건 커요."
+      },
+      "answer": [
+        "A"
+      ],
+      "explanation": "A는 20,000원, B는 30,000원. 주가가 낮은 B의 시가총액이 더 커요.",
+      "option_feedback": {
+        "A": "주식 수까지 곱하면 B가 더 커요.",
+        "B": "A는 20,000원이지만 B는 30,000원이에요.",
+        "C": "B는 1,000 × 30 = 30,000원이에요.",
+        "D": "한 주 가격만 비교하면 전체 규모를 놓쳐요."
+      },
+      "misconception_tags": [
+        "high_price_means_large_company"
+      ],
+      "remediation_concept_ids": [
+        "C_MARKET_CAP"
+      ],
+      "source_refs": [
+        "S03"
+      ],
+      "key_takeaway": "A는 20,000원, B는 30,000원. 주가가 낮은 B의 시가총액이 더 커요."
+    },
+    {
+      "question_id": "Q_L03_003",
+      "lesson_id": "L03",
+      "concept_ids": [
+        "C_MARKET_CAP",
+        "C_REVENUE",
+        "C_NET_INCOME"
+      ],
+      "question_type": "single_choice",
+      "skill_type": "concept_discrimination",
+      "difficulty": 1,
+      "prompt": "시가총액이 100,000원이에요. 이 숫자만으로 모르는 것은?",
+      "options": {
+        "A": "전체 주식의 시장 평가액",
+        "B": "주가 × 주식 수의 값",
+        "C": "1년간 매출",
+        "D": "한 주 가격과는 다른 값이라는 점"
+      },
+      "answer": [
+        "C"
+      ],
+      "explanation": "시가총액과 매출은 달라요. 시가총액만으로 매출은 알 수 없어요.",
+      "option_feedback": {
+        "A": "시가총액은 전체 주식의 시장 평가액이에요.",
+        "B": "주가 × 주식 수로 구해요.",
+        "C": "매출을 알려면 별도 정보가 필요해요.",
+        "D": "한 주 가격은 주가, 전체 주식의 평가액은 시가총액이에요."
+      },
+      "misconception_tags": [
+        "market_cap_equals_revenue"
+      ],
+      "remediation_concept_ids": [
+        "C_MARKET_CAP",
+        "C_REVENUE"
+      ],
+      "source_refs": [
+        "S03"
+      ],
+      "key_takeaway": "시가총액과 매출은 달라요. 시가총액만으로 매출은 알 수 없어요."
+    },
+    {
+      "question_id": "Q_L03_004",
+      "lesson_id": "L03",
+      "concept_ids": [
+        "C_MARKET_CAP"
+      ],
+      "question_type": "single_choice",
+      "skill_type": "calculation",
+      "difficulty": 1,
+      "prompt": "한 주 3,000원, 전체 10주. 전체 주식의 시장 평가액은?",
+      "options": {
+        "A": "3,000원",
+        "B": "30,000원",
+        "C": "13,000원",
+        "D": "매출을 알아야 계산해요."
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "3,000원 × 10주 = 30,000원이에요.",
+      "option_feedback": {
+        "A": "3,000원은 한 주 가격이에요.",
+        "B": "10주 전체를 계산하면 30,000원이에요.",
+        "C": "주가와 주식 수는 더하지 않고 곱해요.",
+        "D": "시가총액은 주가와 주식 수로 계산해요."
+      },
+      "misconception_tags": [],
+      "remediation_concept_ids": [
+        "C_MARKET_CAP"
+      ],
+      "source_refs": [
+        "S03"
+      ],
+      "key_takeaway": "3,000원 × 10주 = 30,000원이에요."
+    },
+    {
+      "question_id": "Q_L04_001",
+      "lesson_id": "L04",
+      "concept_ids": [
+        "C_REVENUE",
+        "C_EXPENSE",
+        "C_NET_INCOME"
+      ],
+      "question_type": "single_choice",
+      "skill_type": "calculation",
+      "difficulty": 1,
+      "prompt": "매출 10,000원, 총비용 7,000원. 남은 순이익은?",
+      "options": {
+        "A": "3,000원",
+        "B": "7,000원",
+        "C": "10,000원",
+        "D": "17,000원"
+      },
+      "answer": [
+        "A"
+      ],
+      "explanation": "10,000 − 7,000 = 3,000원이에요.",
+      "option_feedback": {
+        "A": "매출에서 총비용을 빼요.",
+        "B": "7,000원은 비용이에요.",
+        "C": "매출 전부가 이익으로 남지는 않아요.",
+        "D": "비용은 더하지 않고 빼요."
+      },
+      "misconception_tags": [
+        "revenue_equals_profit"
+      ],
+      "remediation_concept_ids": [
+        "C_REVENUE",
+        "C_EXPENSE",
+        "C_NET_INCOME"
+      ],
+      "source_refs": [
+        "S05",
+        "S06"
+      ],
+      "key_takeaway": "10,000 − 7,000 = 3,000원이에요.",
+      "assumptions": [
+        "총비용에 모든 비용과 세금을 포함해요."
+      ]
+    },
+    {
+      "question_id": "Q_L04_002",
+      "lesson_id": "L04",
+      "concept_ids": [
+        "C_REVENUE",
+        "C_NET_INCOME"
+      ],
+      "question_type": "single_choice",
+      "skill_type": "relationship_application",
+      "difficulty": 1,
+      "prompt": "전년 매출 10,000원·비용 8,000원, 올해 매출 12,000원·비용 11,000원. 순이익은?",
+      "options": {
+        "A": "2,000원 → 1,000원",
+        "B": "2,000원 → 3,000원",
+        "C": "매출이 늘어서 꼭 늘어요.",
+        "D": "두 해 모두 10,000원"
+      },
+      "answer": [
+        "A"
+      ],
+      "explanation": "매출은 늘었지만 비용이 더 늘어, 순이익은 2,000원에서 1,000원으로 줄어요.",
+      "option_feedback": {
+        "A": "각 해의 매출에서 비용을 빼면 돼요.",
+        "B": "올해는 12,000 − 11,000 = 1,000원이에요.",
+        "C": "비용이 더 늘면 이익은 줄 수 있어요.",
+        "D": "매출과 순이익은 다른 숫자예요."
+      },
+      "misconception_tags": [
+        "more_revenue_always_means_more_profit"
+      ],
+      "remediation_concept_ids": [
+        "C_REVENUE",
+        "C_EXPENSE",
+        "C_NET_INCOME"
+      ],
+      "source_refs": [
+        "S05"
+      ],
+      "key_takeaway": "매출은 늘었지만 비용이 더 늘어, 순이익은 2,000원에서 1,000원으로 줄어요.",
+      "assumptions": [
+        "비용에 세금 등 모든 비용을 포함해요."
+      ]
+    },
+    {
+      "question_id": "Q_L04_003",
+      "lesson_id": "L04",
+      "concept_ids": [
+        "C_NET_INCOME",
+        "C_INFORMATION_LIMIT"
+      ],
+      "question_type": "single_choice",
+      "skill_type": "concept_discrimination",
+      "difficulty": 1,
+      "prompt": "올해 순이익이 1,000원이에요. 맞는 설명은?",
+      "options": {
+        "A": "통장 잔액도 꼭 1,000원 늘어요.",
+        "B": "비용 등을 반영한 회계상 이익이에요.",
+        "C": "매출이 1,000원이에요.",
+        "D": "1,000원 전부를 배당해요."
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "순이익은 회계상 이익이에요. 현금 증가액이나 배당금과는 달라요.",
+      "option_feedback": {
+        "A": "현금이 들어오고 나가는 시점은 다를 수 있어요.",
+        "B": "해당 기간의 수익과 비용 등을 반영한 이익이에요.",
+        "C": "매출은 비용을 빼기 전 숫자예요.",
+        "D": "배당 여부와 금액은 별도로 정해져요."
+      },
+      "misconception_tags": [
+        "net_income_equals_cash_flow",
+        "revenue_equals_profit"
+      ],
+      "remediation_concept_ids": [
+        "C_NET_INCOME",
+        "C_INFORMATION_LIMIT"
+      ],
+      "source_refs": [
+        "S05"
+      ],
+      "key_takeaway": "순이익은 회계상 이익이에요. 현금 증가액이나 배당금과는 달라요."
+    },
+    {
+      "question_id": "Q_L04_004",
+      "lesson_id": "L04",
+      "concept_ids": [
+        "C_REVENUE",
+        "C_EXPENSE",
+        "C_NET_INCOME"
+      ],
+      "question_type": "single_choice",
+      "skill_type": "relationship_application",
+      "difficulty": 1,
+      "prompt": "매출 10,000원에서 재료비 5,000원, 다른 비용·세금 3,000원을 빼면?",
+      "options": {
+        "A": "순이익 2,000원",
+        "B": "순이익 5,000원",
+        "C": "순이익 8,000원",
+        "D": "순이익 18,000원"
+      },
+      "answer": [
+        "A"
+      ],
+      "explanation": "10,000 − 5,000 − 3,000 = 2,000원이에요.",
+      "option_feedback": {
+        "A": "모든 비용을 빼면 2,000원이 남아요.",
+        "B": "재료비 말고 다른 비용도 빼야 해요.",
+        "C": "8,000원은 비용의 합계예요.",
+        "D": "비용은 매출에 더하지 않아요."
+      },
+      "misconception_tags": [
+        "revenue_equals_profit"
+      ],
+      "remediation_concept_ids": [
+        "C_EXPENSE",
+        "C_NET_INCOME"
+      ],
+      "source_refs": [
+        "S05",
+        "S06"
+      ],
+      "key_takeaway": "10,000 − 5,000 − 3,000 = 2,000원이에요."
+    },
+    {
+      "question_id": "Q_L05_001",
+      "lesson_id": "L05",
+      "concept_ids": [
+        "C_BASIC_EPS"
+      ],
+      "question_type": "single_choice",
+      "skill_type": "calculation",
+      "difficulty": 1,
+      "prompt": "보통주 몫의 이익 12,000원, 주식 6주. EPS는?",
+      "options": {
+        "A": "200원",
+        "B": "1,200원",
+        "C": "2,000원",
+        "D": "12,000원"
+      },
+      "answer": [
+        "C"
+      ],
+      "explanation": "12,000원 ÷ 6주 = 한 주당 2,000원이에요.",
+      "option_feedback": {
+        "A": "12,000을 6으로 나눠봐요.",
+        "B": "1,200 × 6은 7,200이에요.",
+        "C": "이익을 주식 수로 나눴어요.",
+        "D": "12,000원은 전체 이익이에요."
+      },
+      "misconception_tags": [],
+      "remediation_concept_ids": [
+        "C_BASIC_EPS"
+      ],
+      "source_refs": [
+        "S07",
+        "S08"
+      ],
+      "key_takeaway": "12,000원 ÷ 6주 = 한 주당 2,000원이에요.",
+      "assumptions": [
+        "보통주만 있고 주식 수는 1년 내내 같아요."
+      ]
+    },
+    {
+      "question_id": "Q_L05_002",
+      "lesson_id": "L05",
+      "concept_ids": [
+        "C_WEIGHTED_AVG_SHARES",
+        "C_BASIC_EPS"
+      ],
+      "question_type": "single_choice",
+      "skill_type": "calculation",
+      "difficulty": 1,
+      "prompt": "이익은 둘 다 10,000원. A는 5주, B는 10주라면?",
+      "options": {
+        "A": "둘 다 EPS 1,000원",
+        "B": "A EPS 1,000원 · B EPS 2,000원",
+        "C": "A EPS 2,000원 · B EPS 1,000원",
+        "D": "주식 수가 많은 B의 EPS가 높아요."
+      },
+      "answer": [
+        "C"
+      ],
+      "explanation": "같은 이익을 더 많은 주식으로 나누면 한 주당 이익은 줄어요.",
+      "option_feedback": {
+        "A": "A는 10,000 ÷ 5 = 2,000원이에요.",
+        "B": "A와 B의 계산이 뒤바뀌었어요.",
+        "C": "A는 2,000원, B는 1,000원이에요.",
+        "D": "같은 이익이라면 나눌 주식이 많을수록 EPS는 낮아요."
+      },
+      "misconception_tags": [],
+      "remediation_concept_ids": [
+        "C_WEIGHTED_AVG_SHARES",
+        "C_BASIC_EPS"
+      ],
+      "source_refs": [
+        "S07",
+        "S08"
+      ],
+      "key_takeaway": "같은 이익을 더 많은 주식으로 나누면 한 주당 이익은 줄어요.",
+      "assumptions": [
+        "보통주 몫의 이익이며, 두 회사의 주식 수는 1년 내내 같아요."
+      ]
+    },
+    {
+      "question_id": "Q_L05_003",
+      "lesson_id": "L05",
+      "concept_ids": [
+        "C_BASIC_EPS"
+      ],
+      "question_type": "single_choice",
+      "skill_type": "concept_discrimination",
+      "difficulty": 1,
+      "prompt": "EPS가 3,000원이에요. 확실히 아는 것은?",
+      "options": {
+        "A": "배당금이 꼭 3,000원이에요.",
+        "B": "주가가 꼭 3,000원이에요.",
+        "C": "한 주당 이익이 3,000원으로 계산됐어요.",
+        "D": "한 주당 현금도 3,000원 늘었어요."
+      },
+      "answer": [
+        "C"
+      ],
+      "explanation": "EPS는 한 주당 이익이에요. 배당금·주가·현금과는 달라요.",
+      "option_feedback": {
+        "A": "배당금은 별도로 정해져요.",
+        "B": "주가는 시장에서 정해지는 가격이에요.",
+        "C": "EPS가 뜻하는 한 주당 이익이에요.",
+        "D": "회계상 이익과 현금 증가는 다를 수 있어요."
+      },
+      "misconception_tags": [
+        "eps_equals_dividend",
+        "net_income_equals_cash_flow"
+      ],
+      "remediation_concept_ids": [
+        "C_BASIC_EPS"
+      ],
+      "source_refs": [
+        "S07"
+      ],
+      "key_takeaway": "EPS는 한 주당 이익이에요. 배당금·주가·현금과는 달라요."
+    },
+    {
+      "question_id": "Q_L05_004",
+      "lesson_id": "L05",
+      "concept_ids": [
+        "C_BASIC_EPS"
+      ],
+      "question_type": "single_choice",
+      "skill_type": "calculation",
+      "difficulty": 1,
+      "prompt": "보통주 몫의 이익 20,000원, 주식 10주. 한 주당 이익은?",
+      "options": {
+        "A": "200원",
+        "B": "2,000원",
+        "C": "10,000원",
+        "D": "20,000원"
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "20,000원 ÷ 10주 = EPS 2,000원이에요.",
+      "option_feedback": {
+        "A": "20,000을 10으로 나눠봐요.",
+        "B": "한 주 기준으로 나눈 이익이에요.",
+        "C": "주식 수만큼 나누면 2,000원이에요.",
+        "D": "20,000원은 회사 전체의 보통주 몫 이익이에요."
+      },
+      "misconception_tags": [],
+      "remediation_concept_ids": [
+        "C_BASIC_EPS"
+      ],
+      "source_refs": [
+        "S07"
+      ],
+      "key_takeaway": "20,000원 ÷ 10주 = EPS 2,000원이에요.",
+      "assumptions": [
+        "보통주만 있고 주식 수는 1년 내내 같아요."
+      ]
+    },
+    {
+      "question_id": "Q_L06_001",
+      "lesson_id": "L06",
+      "concept_ids": [
+        "C_PE_RATIO"
+      ],
+      "question_type": "single_choice",
+      "skill_type": "calculation",
+      "difficulty": 1,
+      "prompt": "주가 8,000원, EPS 1,000원. PER은?",
+      "options": {
+        "A": "6배",
+        "B": "8배",
+        "C": "12배",
+        "D": "80배"
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "8,000 ÷ 1,000 = 8배예요.",
+      "option_feedback": {
+        "A": "주가를 EPS로 나눠봐요.",
+        "B": "주가가 EPS의 8배예요.",
+        "C": "8,000 ÷ 1,000은 8이에요.",
+        "D": "8,000원에는 1,000원이 8개 들어가요."
+      },
+      "misconception_tags": [],
+      "remediation_concept_ids": [
+        "C_PE_RATIO"
+      ],
+      "source_refs": [
+        "S10"
+      ],
+      "key_takeaway": "8,000 ÷ 1,000 = 8배예요."
+    },
+    {
+      "question_id": "Q_L06_002",
+      "lesson_id": "L06",
+      "concept_ids": [
+        "C_SHARE_PRICE",
+        "C_BASIC_EPS",
+        "C_PE_RATIO"
+      ],
+      "question_type": "single_choice",
+      "skill_type": "relationship_application",
+      "difficulty": 1,
+      "prompt": "A는 주가 10,000원·EPS 1,000원, B는 주가 5,000원·EPS 250원. 맞는 말은?",
+      "options": {
+        "A": "주가가 낮은 B의 PER도 낮아요.",
+        "B": "A는 10배, B는 20배예요.",
+        "C": "둘 다 PER 10배예요.",
+        "D": "주가가 높은 A의 PER이 높아요."
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "A는 10배, B는 20배. 주가가 낮아도 PER은 더 높을 수 있어요.",
+      "option_feedback": {
+        "A": "PER은 주가뿐 아니라 EPS도 함께 봐요.",
+        "B": "10,000 ÷ 1,000 = 10, 5,000 ÷ 250 = 20이에요.",
+        "C": "B는 5,000 ÷ 250 = 20배예요.",
+        "D": "주가만으로 PER을 비교할 수 없어요."
+      },
+      "misconception_tags": [
+        "low_price_means_cheap_company"
+      ],
+      "remediation_concept_ids": [
+        "C_PE_RATIO"
+      ],
+      "source_refs": [
+        "S10"
+      ],
+      "key_takeaway": "A는 10배, B는 20배. 주가가 낮아도 PER은 더 높을 수 있어요.",
+      "assumptions": [
+        "두 EPS는 같은 기간·기준이에요."
+      ]
+    },
+    {
+      "question_id": "Q_L06_003",
+      "lesson_id": "L06",
+      "concept_ids": [
+        "C_PE_RATIO",
+        "C_INFORMATION_LIMIT"
+      ],
+      "question_type": "single_choice",
+      "skill_type": "interpretation",
+      "difficulty": 1,
+      "prompt": "A PER 8배, B PER 20배. 이 숫자만으로 알 수 있는 것은?",
+      "options": {
+        "A": "A는 무조건 사야 해요.",
+        "B": "B는 무조건 팔아야 해요.",
+        "C": "A의 주가/EPS 비율이 더 낮아요.",
+        "D": "B의 매출이 2.5배예요."
+      },
+      "answer": [
+        "C"
+      ],
+      "explanation": "PER의 크기는 비교할 수 있어요. 투자 판단에는 더 많은 정보가 필요해요.",
+      "option_feedback": {
+        "A": "낮은 PER이 좋은 투자를 보장하지는 않아요.",
+        "B": "높은 PER만으로 매도를 정할 수는 없어요.",
+        "C": "8배가 20배보다 낮다는 비율 차이를 알 수 있어요.",
+        "D": "PER만으로 매출은 알 수 없어요."
+      },
+      "misconception_tags": [
+        "low_pe_means_undervalued",
+        "high_pe_means_overvalued",
+        "one_metric_is_enough"
+      ],
+      "remediation_concept_ids": [
+        "C_PE_RATIO",
+        "C_INFORMATION_LIMIT"
+      ],
+      "source_refs": [
+        "S10"
+      ],
+      "key_takeaway": "PER의 크기는 비교할 수 있어요. 투자 판단에는 더 많은 정보가 필요해요."
+    },
+    {
+      "question_id": "Q_L06_004",
+      "lesson_id": "L06",
+      "concept_ids": [
+        "C_BASIC_EPS",
+        "C_PE_RATIO"
+      ],
+      "question_type": "single_choice",
+      "skill_type": "interpretation",
+      "difficulty": 1,
+      "prompt": "주가 5,000원, EPS 1,000원. PER 5배의 뜻은?",
+      "options": {
+        "A": "5년 뒤 원금을 꼭 돌려받아요.",
+        "B": "주가가 한 주당 이익의 5배예요.",
+        "C": "매출이 5배 늘어요.",
+        "D": "배당금을 5배 받아요."
+      },
+      "answer": [
+        "B"
+      ],
+      "explanation": "PER은 주가와 EPS의 비율이에요. 원금 회수 기간을 보장하지 않아요.",
+      "option_feedback": {
+        "A": "이익과 배당은 달라 원금 회수를 보장하지 않아요.",
+        "B": "5,000 ÷ 1,000 = 5배예요.",
+        "C": "PER은 매출 증가율이 아니에요.",
+        "D": "배당금의 배수를 뜻하지 않아요."
+      },
+      "misconception_tags": [
+        "pe_is_payback_period"
+      ],
+      "remediation_concept_ids": [
+        "C_BASIC_EPS",
+        "C_PE_RATIO",
+        "C_INFORMATION_LIMIT"
+      ],
+      "source_refs": [
+        "S10"
+      ],
+      "key_takeaway": "PER은 주가와 EPS의 비율이에요. 원금 회수 기간을 보장하지 않아요."
+    },
+    {
+      "question_id": "Q_L07_001",
+      "lesson_id": "L07",
+      "concept_ids": [
+        "C_BASIC_EPS",
+        "C_PE_RATIO"
+      ],
+      "question_type": "single_choice",
+      "skill_type": "relationship_application",
+      "difficulty": 1,
+      "prompt": "주가 20,000원 그대로, EPS가 1,000원 → 2,000원. PER은?",
+      "options": {
+        "A": "20배 → 10배",
+        "B": "10배 → 20배",
+        "C": "20배 → 40배",
+        "D": "20배 그대로"
+      },
+      "answer": [
+        "A"
+      ],
+      "explanation": "20,000 ÷ 1,000 = 20배, 20,000 ÷ 2,000 = 10배예요.",
+      "option_feedback": {
+        "A": "주가가 같고 EPS가 커져 PER은 낮아져요.",
+        "B": "주가가 같을 때 EPS가 늘면 PER은 낮아져요.",
+        "C": "EPS는 나누는 수예요. 커질수록 결과는 작아져요.",
+        "D": "PER은 EPS 변화에도 달라져요."
+      },
+      "misconception_tags": [],
+      "remediation_concept_ids": [
+        "C_PE_RATIO"
+      ],
+      "source_refs": [
+        "S10"
+      ],
+      "key_takeaway": "20,000 ÷ 1,000 = 20배, 20,000 ÷ 2,000 = 10배예요."
+    },
+    {
+      "question_id": "Q_L07_002",
+      "lesson_id": "L07",
+      "concept_ids": [
+        "C_SHARE_PRICE",
+        "C_BASIC_EPS",
+        "C_PE_RATIO"
+      ],
+      "question_type": "single_choice",
+      "skill_type": "information_limit",
+      "difficulty": 1,
+      "prompt": "PER이 20배에서 10배로 내려갔어요. 이유를 알 수 있을까요?",
+      "options": {
+        "A": "주가가 꼭 내려갔어요.",
+        "B": "EPS가 꼭 올라갔어요.",
+        "C": "주가와 EPS를 각각 확인해야 해요.",
+        "D": "매출이 꼭 줄었어요."
+      },
+      "answer": [
+        "C"
+      ],
+      "explanation": "주가 하락, EPS 상승, 두 숫자의 동시 변화 모두 가능해요.",
+      "option_feedback": {
+        "A": "주가가 같아도 EPS가 오르면 PER은 내려가요.",
+        "B": "EPS가 같아도 주가가 내리면 PER은 내려가요.",
+        "C": "PER만 보고 원인을 하나로 정할 수 없어요.",
+        "D": "PER 변화만으로 매출 변화는 알 수 없어요."
+      },
+      "misconception_tags": [
+        "correlation_means_cause"
+      ],
+      "remediation_concept_ids": [
+        "C_PE_RATIO",
+        "C_INFORMATION_LIMIT"
+      ],
+      "source_refs": [
+        "S10"
+      ],
+      "key_takeaway": "주가 하락, EPS 상승, 두 숫자의 동시 변화 모두 가능해요."
+    },
+    {
+      "question_id": "Q_L07_003",
+      "lesson_id": "L07",
+      "concept_ids": [
+        "C_SHARE_PRICE",
+        "C_SHARES_OUTSTANDING",
+        "C_MARKET_CAP"
+      ],
+      "question_type": "single_choice",
+      "skill_type": "calculation",
+      "difficulty": 1,
+      "prompt": "전체 10주 그대로, 주가가 1,000원 → 2,000원. 시가총액은?",
+      "options": {
+        "A": "10,000원 → 20,000원",
+        "B": "10,000원 → 12,000원",
+        "C": "1,000원 → 2,000원",
+        "D": "10,000원 그대로"
+      },
+      "answer": [
+        "A"
+      ],
+      "explanation": "주식 수가 같아서, 주가가 2배면 시가총액도 2배예요.",
+      "option_feedback": {
+        "A": "각 주가에 10주를 곱하면 돼요.",
+        "B": "2,000원 × 10주는 20,000원이에요.",
+        "C": "그 숫자는 한 주 가격이에요.",
+        "D": "주식 수가 같아도 주가가 바뀌면 시가총액은 달라져요."
+      },
+      "misconception_tags": [],
+      "remediation_concept_ids": [
+        "C_MARKET_CAP"
+      ],
+      "source_refs": [
+        "S03"
+      ],
+      "key_takeaway": "주식 수가 같아서, 주가가 2배면 시가총액도 2배예요."
+    },
+    {
+      "question_id": "Q_L07_004",
+      "lesson_id": "L07",
+      "concept_ids": [
+        "C_BASIC_EPS",
+        "C_WEIGHTED_AVG_SHARES"
+      ],
+      "question_type": "single_choice",
+      "skill_type": "relationship_application",
+      "difficulty": 1,
+      "prompt": "이익 10,000원은 같고, 주식 수가 5주 → 10주라면 EPS는?",
+      "options": {
+        "A": "2,000원 → 1,000원",
+        "B": "1,000원 → 2,000원",
+        "C": "2,000원 → 3,000원",
+        "D": "2,000원 그대로"
+      },
+      "answer": [
+        "A"
+      ],
+      "explanation": "10,000 ÷ 5 = 2,000원, 10,000 ÷ 10 = 1,000원이에요.",
+      "option_feedback": {
+        "A": "나눌 주식 수가 늘어 한 주당 이익은 줄어요.",
+        "B": "같은 이익을 더 많은 주식으로 나누면 EPS는 낮아져요.",
+        "C": "주식 수가 늘었다고 EPS가 늘지는 않아요.",
+        "D": "EPS는 이익과 주식 수를 함께 봐요."
+      },
+      "misconception_tags": [
+        "eps_uses_current_share_count_only"
+      ],
+      "remediation_concept_ids": [
+        "C_BASIC_EPS",
+        "C_WEIGHTED_AVG_SHARES"
+      ],
+      "source_refs": [
+        "S07",
+        "S08"
+      ],
+      "key_takeaway": "10,000 ÷ 5 = 2,000원, 10,000 ÷ 10 = 1,000원이에요.",
+      "assumptions": [
+        "두 기간의 보통주 몫 이익을 비교해요. 각 기간 안에서는 주식 수가 같아요."
+      ]
+    },
+    {
+      "question_id": "Q_L08_001",
+      "lesson_id": "L08",
+      "concept_ids": [
+        "C_MARKET_CAP",
+        "C_NET_INCOME",
+        "C_PE_RATIO"
+      ],
+      "question_type": "multi_select",
+      "skill_type": "interpretation",
+      "difficulty": 2,
+      "prompt": "표에서 바로 알 수 있는 것을 모두 골라요.",
+      "options": {
+        "A": "D의 시가총액이 더 커요.",
+        "B": "C의 순이익이 더 커요.",
+        "C": "C의 PER이 더 낮아요.",
+        "D": "D가 무조건 더 좋은 투자예요."
+      },
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explanation": "규모·이익·PER은 비교할 수 있지만, 좋은 투자까지 정해주지는 않아요.",
+      "option_feedback": {
+        "A": "90,000원이 60,000원보다 커요.",
+        "B": "12,000원이 9,000원보다 커요.",
+        "C": "5배가 10배보다 낮아요.",
+        "D": "투자 판단에는 성장 가능성과 위험 등도 필요해요."
+      },
+      "misconception_tags": [
+        "one_metric_is_enough"
+      ],
+      "remediation_concept_ids": [
+        "C_INFORMATION_LIMIT"
+      ],
+      "source_refs": [
+        "S03",
+        "S05",
+        "S10"
+      ],
+      "key_takeaway": "규모·이익·PER은 비교할 수 있지만, 좋은 투자까지 정해주지는 않아요."
+    },
+    {
+      "question_id": "Q_L08_002",
+      "lesson_id": "L08",
+      "concept_ids": [
+        "C_INFORMATION_LIMIT"
+      ],
+      "question_type": "single_choice",
+      "skill_type": "information_limit",
+      "difficulty": 1,
+      "prompt": "표만으로 답할 수 없는 질문은?",
+      "options": {
+        "A": "어느 회사의 주가가 더 높을까요?",
+        "B": "어느 회사의 시가총액이 더 클까요?",
+        "C": "어느 회사의 PER이 더 낮을까요?",
+        "D": "어느 회사가 더 좋은 투자일까요?"
+      },
+      "answer": [
+        "D"
+      ],
+      "explanation": "좋은 투자 여부는 표 밖의 정보도 함께 봐야 해요.",
+      "option_feedback": {
+        "A": "주가는 표로 비교할 수 있어요.",
+        "B": "시가총액은 표로 비교할 수 있어요.",
+        "C": "PER은 표로 비교할 수 있어요.",
+        "D": "성장 가능성·위험·재무상태 등의 정보가 더 필요해요."
+      },
+      "misconception_tags": [
+        "low_pe_means_undervalued",
+        "one_metric_is_enough"
+      ],
+      "remediation_concept_ids": [
+        "C_INFORMATION_LIMIT",
+        "C_PE_RATIO"
+      ],
+      "source_refs": [
+        "S10"
+      ],
+      "key_takeaway": "좋은 투자 여부는 표 밖의 정보도 함께 봐야 해요."
+    },
+    {
+      "question_id": "Q_L08_003",
+      "lesson_id": "L08",
+      "concept_ids": [
+        "C_SHARE_PRICE",
+        "C_SHARES_OUTSTANDING",
+        "C_MARKET_CAP",
+        "C_BASIC_EPS",
+        "C_PE_RATIO"
+      ],
+      "question_type": "single_choice",
+      "skill_type": "calculation",
+      "difficulty": 2,
+      "prompt": "C의 주가만 18,000원으로 오르면, 시가총액과 PER은?",
+      "options": {
+        "A": "72,000원 · 6배",
+        "B": "60,000원 · 5배",
+        "C": "90,000원 · 6배",
+        "D": "72,000원 · 5배"
+      },
+      "answer": [
+        "A"
+      ],
+      "explanation": "18,000 × 4주 = 72,000원, 18,000 ÷ 3,000 = 6배예요.",
+      "option_feedback": {
+        "A": "주식 수와 EPS는 그대로 두고 새 주가를 넣어요.",
+        "B": "주가가 올랐으므로 두 값 모두 다시 계산해요.",
+        "C": "18,000 × 4는 72,000이에요.",
+        "D": "EPS가 같고 주가가 올랐으므로 PER도 올라요."
+      },
+      "misconception_tags": [],
+      "remediation_concept_ids": [
+        "C_MARKET_CAP",
+        "C_PE_RATIO"
+      ],
+      "source_refs": [
+        "S03",
+        "S10"
+      ],
+      "key_takeaway": "18,000 × 4주 = 72,000원, 18,000 ÷ 3,000 = 6배예요.",
+      "assumptions": [
+        "주식 수 4주와 EPS 3,000원은 그대로예요."
+      ]
+    },
+    {
+      "question_id": "Q_L08_004",
+      "lesson_id": "L08",
+      "concept_ids": [
+        "C_PE_RATIO",
+        "C_INFORMATION_LIMIT"
+      ],
+      "question_type": "single_choice",
+      "skill_type": "interpretation",
+      "difficulty": 1,
+      "prompt": "C의 PER이 D보다 낮아요. 정확한 설명은?",
+      "options": {
+        "A": "C가 무조건 저평가됐어요.",
+        "B": "C의 미래 수익률이 꼭 더 높아요.",
+        "C": "C의 주가/EPS 비율이 더 낮아요.",
+        "D": "C의 매출이 꼭 더 많아요."
+      },
+      "answer": [
+        "C"
+      ],
+      "explanation": "확인한 것은 PER의 차이예요. 저평가나 미래 수익률은 따로 살펴봐야 해요.",
+      "option_feedback": {
+        "A": "낮은 PER만으로 저평가를 확정할 수는 없어요.",
+        "B": "PER이 미래 수익률을 보장하지는 않아요.",
+        "C": "표에서 확인할 수 있는 비율의 차이예요.",
+        "D": "PER로 매출을 알 수는 없어요."
+      },
+      "misconception_tags": [
+        "low_pe_means_undervalued",
+        "one_metric_is_enough"
+      ],
+      "remediation_concept_ids": [
+        "C_PE_RATIO",
+        "C_INFORMATION_LIMIT"
+      ],
+      "source_refs": [
+        "S10"
+      ],
+      "key_takeaway": "확인한 것은 PER의 차이예요. 저평가나 미래 수익률은 따로 살펴봐야 해요."
+    }
+  ],
+  "integrated_case": {
+    "integrated_case_id": "CASE_L08_B",
+    "assumptions": [
+      "같은 회계기간의 가상 회사예요.",
+      "보통주만 있고 주식 수는 1년 내내 같아요."
+    ],
+    "companies": {
+      "C회사": {
+        "share_price": 15000,
+        "shares": 4,
+        "revenue": 60000,
+        "expenses": 48000,
+        "net_income": 12000,
+        "eps": 3000,
+        "pe": 5,
+        "market_cap": 60000
+      },
+      "D회사": {
+        "share_price": 9000,
+        "shares": 10,
+        "revenue": 90000,
+        "expenses": 81000,
+        "net_income": 9000,
+        "eps": 900,
+        "pe": 10,
+        "market_cap": 90000
+      }
+    }
+  },
+  "integrated_case_table": "| 항목 | C회사 | D회사 |\n|---|---:|---:|\n| 주가 | 15,000원 | 9,000원 |\n| 주식 수 | 4주 | 10주 |\n| 매출 | 60,000원 | 90,000원 |\n| 총비용 | 48,000원 | 81,000원 |\n| 순이익 | 12,000원 | 9,000원 |\n| EPS | 3,000원 | 900원 |\n| PER | 5배 | 10배 |\n| 시가총액 | 60,000원 | 90,000원 |",
+  "learning_case": {
+    "learning_case_id": "CASE_L08_A",
+    "companies": {
+      "A회사": {
+        "share_price": 10000,
+        "shares": 4,
+        "revenue": 50000,
+        "expenses": 42000,
+        "net_income": 8000,
+        "eps": 2000,
+        "pe": 5,
+        "market_cap": 40000
+      },
+      "B회사": {
+        "share_price": 5000,
+        "shares": 10,
+        "revenue": 80000,
+        "expenses": 75000,
+        "net_income": 5000,
+        "eps": 500,
+        "pe": 10,
+        "market_cap": 50000
+      }
+    }
+  },
+  "sources": [
+    {
+      "id": "S01",
+      "organization": "U.S. SEC Investor.gov",
+      "title": "Stock",
+      "url": "https://www.investor.gov/introduction-investing/investing-basics/glossary/stock",
+      "used_for": [
+        "L01"
+      ]
+    },
+    {
+      "id": "S02",
+      "organization": "U.S. SEC Investor.gov",
+      "title": "Stocks - FAQs",
+      "url": "https://www.investor.gov/introduction-investing/investing-basics/investment-products/stocks",
+      "used_for": [
+        "L01"
+      ]
+    },
+    {
+      "id": "S03",
+      "organization": "U.S. SEC Investor.gov",
+      "title": "Market Capitalization",
+      "url": "https://www.investor.gov/introduction-investing/investing-basics/glossary/market-capitalization",
+      "used_for": [
+        "L02",
+        "L03",
+        "L07",
+        "L08"
+      ]
+    },
+    {
+      "id": "S04",
+      "organization": "U.S. SEC Investor.gov",
+      "title": "Investor Bulletin - Index Funds",
+      "url": "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins-26",
+      "used_for": [
+        "L02",
+        "L03"
+      ]
+    },
+    {
+      "id": "S05",
+      "organization": "U.S. Securities and Exchange Commission",
+      "title": "Beginners' Guide to Financial Statements",
+      "url": "https://www.sec.gov/about/reports-publications/beginners-guide-financial-statements",
+      "used_for": [
+        "L04",
+        "L06",
+        "L08"
+      ]
+    },
+    {
+      "id": "S06",
+      "organization": "U.S. SEC Office of the Advocate for Small Business Capital Formation",
+      "title": "What is an income statement?",
+      "url": "https://www.sec.gov/files/income-statement-building-blocks.pdf",
+      "used_for": [
+        "L04"
+      ]
+    },
+    {
+      "id": "S07",
+      "organization": "IFRS Foundation",
+      "title": "IAS 33 Earnings per Share",
+      "url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-33-earnings-per-share/",
+      "used_for": [
+        "L05",
+        "L07",
+        "L08"
+      ]
+    },
+    {
+      "id": "S08",
+      "organization": "한국회계기준원",
+      "title": "시행 중 K-IFRS 제1033호 주당이익",
+      "url": "https://www.kasb.or.kr/front/board/ingAccountingList.do",
+      "used_for": [
+        "L05"
+      ]
+    },
+    {
+      "id": "S09",
+      "organization": "한국회계기준원",
+      "title": "주당이익 산출 시 보통주 귀속이익 관련 K-IFRS 제1033호 질의회신",
+      "url": "https://kasb.or.kr/front/board/View016005.do?seq=38599",
+      "used_for": [
+        "L05"
+      ],
+      "note": "질의회신 페이지 자체는 정규 기준서 본문이 아니므로 기준서 원칙 보조 확인용으로만 사용한다."
+    },
+    {
+      "id": "S10",
+      "organization": "U.S. SEC Investor.gov",
+      "title": "Price-earnings (P/E) Ratio",
+      "url": "https://www.investor.gov/introduction-investing/investing-basics/glossary/price-earnings-pe-ratio",
+      "used_for": [
+        "L06",
+        "L07",
+        "L08"
+      ]
+    }
+  ]
+}

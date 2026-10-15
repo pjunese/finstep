@@ -1,0 +1,144 @@
+import 'dart:convert';
+import 'dart:io';
+import 'package:yaml/yaml.dart';
+
+List<Map<String, dynamic>> yamlRecords(
+  String source,
+) => RegExp(r'```yaml\n([\s\S]*?)```')
+    .allMatches(source)
+    .map(
+      (m) => loadYaml(
+        m[1]!.replaceAll(
+          'formula: educational_example_only: net_income = revenue - total_expenses',
+          'formula: "educational_example_only: net_income = revenue - total_expenses"',
+        ),
+      ),
+    )
+    .whereType<YamlMap>()
+    .map((m) => Map<String, dynamic>.from(jsonDecode(jsonEncode(m)) as Map))
+    .toList();
+String clean(String s) => s
+    .replaceAll(RegExp(r'```yaml[\s\S]*?```'), '')
+    .replaceAll(RegExp(r'### `[^`]+`'), '### 헷갈리기 쉬운 점')
+    .replaceAll(RegExp(r'\*\*source_refs:\*\*[^\n]*'), '')
+    .replaceAll(RegExp(r'\n---\s*$'), '')
+    .trim();
+void main(List<String> args) {
+  final content = File('06_Concept_Content_Data.md').readAsStringSync();
+  final quiz = File('07_Quiz_Data.md').readAsStringSync();
+  final map = File('05_Concept_Map_Data.md').readAsStringSync();
+  final records = yamlRecords(map);
+  final concepts = records.where((m) => m.containsKey('concept_id')).toList();
+  final quizRecords = yamlRecords(quiz);
+  final questions = quizRecords
+      .where(
+        (m) => m.containsKey('question_id') && m['question_id'] != 'string',
+      )
+      .toList();
+  final starts = RegExp(
+    r'^# [1-8]\. (L\d{2}) — (.+)$',
+    multiLine: true,
+  ).allMatches(content).toList();
+  final lessons = <Map<String, dynamic>>[];
+  const selectedSections = [
+    [2, 4, 5],
+    [1, 2, 3],
+    [1, 2, 4, 5],
+    [1, 3, 4, 5],
+    [1, 3, 4, 5],
+    [1, 2, 4, 6],
+    [2, 3, 6],
+    [1, 2, 3, 4],
+  ];
+  for (var i = 0; i < starts.length; i++) {
+    final m = starts[i];
+    final end = i + 1 < starts.length
+        ? starts[i + 1].start
+        : content.indexOf('# 9. 앱 내');
+    final source = content.substring(m.end, end);
+    final metadata = yamlRecords(source).first;
+    final sections = RegExp(
+      r'^## (\d+)\.(\d+) (.+)$',
+      multiLine: true,
+    ).allMatches(source).toList();
+    final pages = <Map<String, dynamic>>[];
+    String summary = '', next = '';
+    for (var j = 0; j < sections.length; j++) {
+      final heading = sections[j];
+      final body = clean(
+        source.substring(
+          heading.end,
+          j + 1 < sections.length ? sections[j + 1].start : source.length,
+        ),
+      );
+      if (heading[3]!.contains('핵심 카드') || heading[3]!.contains('코스 완료 문구')) {
+        summary = body.replaceAll(RegExp(r'> |\*\*'), '');
+      }
+      if (heading[3]!.contains('다음 질문')) next = body.replaceAll('> ', '');
+      if (selectedSections[i].contains(int.parse(heading[2]!))) {
+        var title = heading[3]!;
+        if (title == '쉬운 설명' || title == '핵심 관계' || title == '핵심 산식') {
+          title = metadata['title'] as String;
+        }
+        pages.add({'title': title, 'body': body});
+      }
+    }
+    if (i == 7) summary = '주가·시가총액·이익·EPS·PER을 연결하고, 추가 정보가 필요한 판단을 구분했어요.';
+    lessons.add({
+      ...metadata,
+      'short_title': m[2],
+      'pages': pages,
+      'summary': summary,
+      'next_question': next,
+      'source_refs': RegExp(
+        r'`(S\d+)`',
+      ).allMatches(source).map((m) => m[1]).toSet().toList(),
+    });
+  }
+  final cards = <String, dynamic>{};
+  for (final m in RegExp(
+    r'^## `(C_\w+)`\n([\s\S]*?)(?=^## |^# |$(?![\s\S]))',
+    multiLine: true,
+  ).allMatches(content)) {
+    final rs = yamlRecords(m[2]!);
+    if (rs.isNotEmpty) cards[m[1]!] = rs.first;
+  }
+  final caseTable = RegExp(
+    r'표시용:\s*([\s\S]*?)\n## Q_L08_001',
+  ).firstMatch(quiz)![1]!.trim();
+  final data = {
+    'schema_version': 1,
+    'content_version': '2026-10-07.short-v2',
+    'course_title': '주가를 넘어\n기업의 숫자 이해하기',
+    'lessons': lessons,
+    'concepts': concepts,
+    'cards': cards,
+    'edges': records.firstWhere((m) => m.containsKey('edges'))['edges'],
+    'questions': questions,
+    'integrated_case': quizRecords.firstWhere(
+      (m) => m.containsKey('integrated_case_id'),
+    ),
+    'integrated_case_table': caseTable,
+    'learning_case': yamlRecords(
+      content,
+    ).firstWhere((m) => m.containsKey('learning_case_id')),
+    'sources': yamlRecords(
+      content,
+    ).firstWhere((m) => m.containsKey('sources'))['sources'],
+  };
+  final encoded = '${const JsonEncoder.withIndent('  ').convert(data)}\n';
+  final output = File('assets/data/course.json');
+  if (args.contains('--check')) {
+    if (!output.existsSync() || output.readAsStringSync() != encoded) {
+      throw StateError(
+        'MD와 생성 데이터가 다릅니다. dart run tool/import_content.dart를 실행하세요.',
+      );
+    }
+  } else {
+    output.parent.createSync(recursive: true);
+    output.writeAsStringSync(encoded);
+  }
+  stdout.writeln(
+    '${lessons.length} lessons / ${concepts.length} concepts / ${questions.length} questions',
+  );
+}

@@ -62,3 +62,17 @@ work/
 *.mobileprovision
 **/google-services.json
 **/GoogleService-Info.plist
+
+# Private server credentials and local environment files
+.envrc
+.secret.local
+.secret.*.local
+*.pem
+*.key
+**/*service-account*.json
+**/*service_account*.json
+**/*serviceAccount*.json
+**/*firebase-adminsdk*.json
+functions/.runtimeconfig.json
+functions/node_modules/
+.firebase/
